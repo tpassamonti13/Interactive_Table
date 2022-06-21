@@ -1,24 +1,20 @@
-import logo from './logo.svg';
+import React, { useEffect } from 'react';
+import Home from './components/pages/Home';
+import TwoThousand from './components/pages/TwoThousand';
+import Today from './components/pages/Today';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+        <Routes>
+          <Route index element={<Home />} />
+          <Route path="twoThousand" element={<TwoThousand />} />
+          <Route path="today" element={<Today />} />
+        </Routes>
+      </Router>
   );
 }
 
