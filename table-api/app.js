@@ -6,6 +6,7 @@ var logger = require('morgan');
 
 // setup telnet client
 const { Telnet } = require('telnet-client');
+const conn = new Telnet();
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -44,37 +45,35 @@ app.use(function(err, req, res, next) {
 // telnet connection to Watchout
 (async function() {
 
-const conn = new Telnet();
+  const watchoutParams = {
+    host: '192.168.0.16',
+    port: 3039,
+    shellPrompt: null,
+    negotiationMandatory: false,
+    timeout: 3000
+  }
 
-const watchoutParams = {
-  host: '192.168.0.16',
-  port: 3039,
-  shellPrompt: null,
-  negotiationMandatory: false,
-  timeout: 3000
-}
+  // Watchout commands here
+  try{
+    await conn.connect(watchoutParams);
+  } catch(err) {
+    console.log("error: ", err);
+  }
 
-// Watchout commands here
-try{
-  await conn.connect(watchoutParams);
-} catch(err) {
-  console.log("error: ", err);
-}
+  console.log("connected");
 
-console.log("connected");
+  var res = await conn.send('ping');
 
-var res = await conn.send('ping');
+  console.log("ping: ", res);
 
-console.log("ping: ", res);
+  res = await conn.send('authenticate 1');
 
-res = await conn.send('authenticate 1');
+  console.log("authentiate: ", res);
 
-console.log("authentiate: ", res);
+  res = await conn.send('run TEST');
 
-res = await conn.send('run TEST');
+  console.log("run TEST: ", res);
 
-console.log("run TEST: ", res);
-
-conn.end();
+  conn.end();
 })()
 module.exports = app;
