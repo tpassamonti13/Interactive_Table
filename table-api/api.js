@@ -16,7 +16,24 @@ app.get('/', (req, res) => {
 });
 
 io.on('connection', (socket) => {
-  console.log("user connected on ", socket);
+  console.log("user connected");
+
+  // handle events
+  socket.on("start video", (video_id) => {
+    console.log("new video playing: ", video_id);
+  });
+
+  socket.on("pause video", () => {
+    console.log("pausing video");
+  });
+
+  socket.on("resume video", () => {
+    console.log("resuming video");
+  });
+
+  socket.on("restart video", () => {
+    console.log("restarting video");
+  });
 });
 
 server.listen(port, () => {

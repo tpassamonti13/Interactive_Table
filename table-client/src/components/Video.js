@@ -1,21 +1,21 @@
 import React from 'react';
-
-const socket = io('192.168.0.45:3456');
+import App from '../App';
+//const socket = io('192.168.0.45:3456');
 
 function StartVideo(video_id) {
-  socket.emit('play video', video_id);
+  App.socket.emit('play video', video_id);
 }
 
 function PauseVideo() {
-  socket.emit('pause video', "");
+  App.socket.emit('pause video', "");
 }
 
 function ResumeVideo() {
-  socket.emit('resume video', "");
+  App.socket.emit('resume video', "");
 }
 
 function ReplayVideo() {
-  socket.
+  App.socket.emit('replay video',"");
 }
 
 function init()
