@@ -1,20 +1,30 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import DecadeButton from '../../components/DecadeButton.js';
+import HCGTButton from '../../components/HCGTButton.js';
 import '../../App.css';
 import './Pages.css';
 
 
 function TwoThousand()
 {
-	const navigate = useNavigate();
-
 	return (
 		<div className='tableArea'>
 			<div className='tableLeft'>
+				<div className='videoPlaylistContainer'>
+				</div>
+				<div className='largeVideoThumbnailContainer'>
+				</div>
+				<div className='videoTitleArea'>
+				</div>
 			</div>
 			<div className='tableRight'>
-				<h1>2000 - 2010</h1>
+				<div className='bLevelContentArea'>
+				</div>
+				<div className='hcgtButtonsContainer'>
+					<HCGTButton navigation = '/' />
+					<HCGTButton navigation = 'culture' />
+					<HCGTButton navigation = 'growth' />
+					<HCGTButton navigation = 'technology' />
+				</div>
 			</div>
 		</div>
 	);
