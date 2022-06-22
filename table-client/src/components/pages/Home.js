@@ -25,12 +25,14 @@ function Home()
 					<div className='row h-100'>
 						<div className='col-md-12 text-center'>
 							<div className='buttonContainer'>
-								<DecadeButton text='2000-2010' navigation='/twoThousand' />
+								<h1>SELECT A DECADE</h1>
+								<br/>
+								<DecadeButton text='2000-2009' navigation='/twoThousand' />
 								<br />
 								<br />
 								<br />
 								<br />
-								<DecadeButton text='2011 - TODAY' navigation='/today' />
+								<DecadeButton text='2010 - NOW' navigation='/today' />
 							</div>
 						</div>
 					</div>

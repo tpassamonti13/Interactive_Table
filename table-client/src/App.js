@@ -4,12 +4,12 @@ import TwoThousand from './components/pages/TwoThousand';
 import Today from './components/pages/Today';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
-import Video from './components/Video.js';
+import './fonts/EncodeSans-VariableFont_wdth,wght.ttf';
 
 function App() {
 
   // initialize the video handlers
-  Video.init();
+  //Video.init();
 
   return (
     <Router>

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import HCGTButton from '../../components/HCGTButton.js';
+import BLevelContentTwoThousand from '../views/BLevelContentTwoThousand.js'
 import '../../App.css';
 import './Pages.css';
 
@@ -18,6 +19,7 @@ function TwoThousand()
 			</div>
 			<div className='tableRight'>
 				<div className='bLevelContentArea'>
+					<BLevelContentTwoThousand />
 				</div>
 				<div className='hcgtButtonsContainer'>
 					<HCGTButton navigation = '/' />

@@ -14,6 +14,6 @@ function playOverviewVideo()
 }
 
   return (
-        <button className='decadeButton' onClick={() => playOverviewVideo()}>{text}</button>
+  		<div onClick={() => playOverviewVideo() } className='decadeButton'>{text}</div>
   );
 }
