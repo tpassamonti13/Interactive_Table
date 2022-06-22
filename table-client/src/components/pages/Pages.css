@@ -2,10 +2,11 @@
 {
 	width: 100vw;
 	height: 100vh;
+	background: url('../../images/History_Room_Table_design_v01.jpg');
 }
 .tableLeft
 {
-	width: 3870px;
+	width: 50vw;
 	height: 100vh;
 	position: absolute;
 	top: 0;
@@ -13,11 +14,11 @@
 }
 .tableRight
 {
-	width: 3870px;
+	width: 50vw;
 	height: 100vh;
 	position: absolute;
 	top: 0;
-	left: 3890px;
+	left: 3840px;
 }
 .logopontainer
 {
@@ -32,4 +33,51 @@
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+}
+.bLevelContentArea
+{
+	position: absolute;
+	top: 450px;
+	left: 200px;
+	height: 1350px;
+	width: 3450px;
+	border: solid #ED1B2E 20px;
+}
+.videoPlaylistContainer
+{
+	position: absolute;
+	left: 200px;
+	top: 450px;
+	height: 1660px;
+	width: 800px;
+	border: solid #ED1B2E 20px;
+
+}
+.largeVideoThumbnailContainer
+{
+	position: absolute;
+	right: 200px;
+	top: 450px;
+	width: 2500px;
+	height: 1350px;
+	border: solid #ED1B2E 20px;
+}
+.videoTitleArea
+{
+	position: absolute;
+	bottom: 50px;
+	left: 1142px;
+	height: 250px;
+	width: 2500px;
+	border: solid #ED1B2E 20px;
+}
+.hcgtButtonsContainer
+{
+	position: absolute;
+	bottom: 50px;
+	left: 200px;
+	height: 250px;
+	width: 1250px;
+	background-color: rgba(237, 27, 46, 0.4);
+	border: solid #ED1B2E 20px;
 }
