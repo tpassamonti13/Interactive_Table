@@ -8,8 +8,8 @@ import Video from './components/Video.js';
 
 function App() {
 
-  // initialize the video handlers
-  Video.init();
+
+
 
   return (
     <Router>
