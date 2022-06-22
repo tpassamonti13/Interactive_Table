@@ -1,10 +1,21 @@
 import React from 'react';
-import { io } from 'socket.io-client';
-const port = process.env.PORT || 3000;
+
 const socket = io('192.168.0.45:3456');
 
-async function StartVideo(video_id) {
+function StartVideo(video_id) {
+  socket.emit('play video', video_id);
+}
 
+function PauseVideo() {
+  socket.emit('pause video', "");
+}
+
+function ResumeVideo() {
+  socket.emit('resume video', "");
+}
+
+function ReplayVideo() {
+  socket.
 }
 
 function init()
@@ -12,4 +23,4 @@ function init()
 	console.log('video initialized');
 }
 
-export default init;
+export {StartVideo, PauseVideo, ResumeVideo, ReplayVideo};
