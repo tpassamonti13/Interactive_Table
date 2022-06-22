@@ -9,7 +9,7 @@ import './fonts/EncodeSans-VariableFont_wdth,wght.ttf';
 function App() {
 
   // initialize the video handlers
-  //Video.init();
+Video.init();
 
   return (
     <Router>
