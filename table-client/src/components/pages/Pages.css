@@ -2,7 +2,6 @@
 {
 	width: 100vw;
 	height: 100vh;
-	background: url('../../images/History_Room_Table_design_v01.jpg');
 }
 .tableLeft
 {
@@ -46,7 +45,27 @@
 	left: 200px;
 	height: 1350px;
 	width: 3450px;
-	border: solid #ED1B2E 20px;
+}
+.backgroundTextTop,
+.backgroundTextBottom
+{
+	color: #a9a9a9;
+	opacity: 0.6;
+	font-weight: bolder;
+	font-size: 300px;
+	font-family: 'Encode Sans', sans-serif !important;
+}
+.backgroundTextTop
+{
+	position: absolute;
+	top: 25px;
+	left: 200px;
+}
+.backgroundTextBottom
+{
+	position: absolute;
+	bottom: 25px;
+	right: 200px;
 }
 .videoPlaylistContainer
 {

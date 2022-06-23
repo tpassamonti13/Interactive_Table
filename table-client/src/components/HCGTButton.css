@@ -21,3 +21,19 @@
 {
 	background: url('../images/HCGT_Buttons/Button03_Tech_Black_04.png') no-repeat center;
 }
+.HCGTButton:nth-of-type(1):active
+{
+	background: url('../images/HCGT_Buttons/Button01_Home_Red_04.png') no-repeat center;
+}
+.HCGTButton:nth-of-type(2):active
+{
+	background: url('../images/HCGT_Buttons/Button02_Culture_Red_04.png') no-repeat center;
+}
+.HCGTButton:nth-of-type(3):active
+{
+	background: url('../images/HCGT_Buttons/Button04_Growth_Red_04.png') no-repeat center;
+}
+.HCGTButton:nth-of-type(4):active
+{
+	background: url('../images/HCGT_Buttons/Button03_Tech_Red_04.png') no-repeat center;
+}

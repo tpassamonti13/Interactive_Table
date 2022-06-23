@@ -9,6 +9,7 @@ function Today()
 	return (
 		<div className='tableArea'>
 			<div className='tableLeft'>
+				<h1 className='backgroundTextTop'>2010-NOW</h1>
 				<div className='videoPlaylistContainer'>
 				</div>
 				<div className='largeVideoThumbnailContainer'>
@@ -25,6 +26,7 @@ function Today()
 					<HCGTButton navigation = 'growth' />
 					<HCGTButton navigation = 'technology' />
 				</div>
+				<h1 className='backgroundTextBottom'>2010-NOW</h1>
 			</div>
 		</div>
 	);

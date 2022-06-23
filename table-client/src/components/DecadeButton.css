@@ -13,7 +13,7 @@
 }
 .decadeButton:nth-of-type(2)
 {
-	margin-right: 425px;
+	margin-right: 700px;
 }
 .decadeButton:before 
 {
@@ -29,10 +29,10 @@
   height: 100%;
   transition: .2s;
   -webkit-backface-visibility: hidden;
-  -webkit-transform: skewX(-30deg);
-  -moz-transform: skewX(-30deg);
-  -ms-transform: skewX(-30deg);
-  transform: skewX(-30deg);
+  -webkit-transform: skewX(-45deg);
+  -moz-transform: skewX(-45deg);
+  -ms-transform: skewX(-45deg);
+  transform: skewX(-45deg);
   border: 20px solid #ED1B2E;
 }
 .decadeButton:active:before

@@ -6,11 +6,12 @@ import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import './fonts/EncodeSans-VariableFont_wdth,wght.ttf';
 import {StartVideo, PauseVideo, ResumeVideo, RestartVideo} from './components/Video';
+import backgroundVideo from './videos/Halftone_Hero_03_TABLE.mp4';
 
 class App extends Component{
 
   // initialize the video handlers
-Video.init();
+//Video.init();
   //  const socket = io('localhost:3456');
   //  StartVideo();
   App(){
@@ -37,6 +38,11 @@ Video.init();
   render() {
     return (
       <Router>
+          <div>
+            <video autoPlay muted loop>
+              <source src={backgroundVideo} type="video/mp4" />
+            </video>
+          </div>
           <Routes>
             <Route index element={<Home />} />
             <Route path="twoThousand" element={<TwoThousand />} />
