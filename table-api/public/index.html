@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>History Room Video Player</title>
+    <style>
+
+    </style>
+  </head>
+  <body>
+    <video id="vplayer" width="1920px" height="1080px"></video>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+      var socket=io();
+
+      socket.on('play', (video_id) => {
+        console.log('playing video');
+
+        var video = document.getElementById('vplayer');
+        var source = document.createElement('source');
+        
+        source.setAttribute('src', 'TODO FILENAME');
+        source.setAttribute('type', 'TODO FILETYPE');
+
+        video.appendChild(source);
+        video.play();
+      });
+    </script>
+  </body>
+</html>
