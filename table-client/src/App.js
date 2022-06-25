@@ -3,12 +3,12 @@ import Home from './components/pages/Home';
 import TwoThousand from './components/pages/TwoThousand';
 import Today from './components/pages/Today';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
-import './App.css';
-import './fonts/EncodeSans-VariableFont_wdth,wght.ttf';
 import {StartVideo, PauseVideo, ResumeVideo, RestartVideo} from './components/Video';
 import backgroundVideo from './videos/Halftone_Hero_03_TABLE.mp4';
+import './App.css';
+import './fonts/EncodeSans-VariableFont_wdth,wght.ttf';
 const table_api = process.env.TABLE_API || 'localhost:3456';
-const socket = window.io(table_api);
+//const socket = window.io(table_api);
 
 class App extends Component{
 
@@ -42,10 +42,12 @@ class App extends Component{
 
   render() {
 
+
     //socket.emit('pause video');
     return (
+
       <Router>
-          <div>
+          <div className='backgroundVideo'>
             <video autoPlay muted loop>
               <source src={backgroundVideo} type="video/mp4" />
             </video>
@@ -60,4 +62,4 @@ class App extends Component{
   }
 }
 export default App;
-export { socket };
+//export { socket };

@@ -1,8 +1,12 @@
 import React, { useState } from "react";
 import './BLevelContent.css';
+import IMGPane from '../../components/IMGPane.js';
+import '../../components/Modal.css';
 
 function BLevelContentTwoThousand()
 {
+	const [isVisible, setIsVisible] = useState(false);
+
 	return (
 		<div>
 			<ul className="nav nav-pills nav-fill" role="tablist">
@@ -14,57 +18,10 @@ function BLevelContentTwoThousand()
 			  </li>
 			</ul>
 
-			<div id="tabContainer">
-				<div class="tab-content">
-					<div class="tab-pane fade show active" id="leadership" role="tabpanel" aria-labelledby="leadership-tab">
-						<div class="row">
-							<div class="col-md-2">
-								<div class="img-inner"></div>
-							</div>
-							<div class="col-md-2">
-								<div class="img-inner"></div>
-							</div>'
-							<div class="col-md-2">
-								<div class="img-inner"></div>
-							</div>
-							<div class="col-md-2">
-								<div class="img-inner"></div>
-							</div>
-							<div class="col-md-2">
-								<div class="img-inner"></div>
-							</div>
-							<div class="col-md-2">
-								<div class="img-inner"></div>
-							</div>
-							<div class="col-md-2">
-								<div class="img-inner"></div>
-							</div>
-						</div>
-					</div>
-					<div class="tab-pane fade" id="esdc" role="tabpanel" aria-labelledby="esdc-tab">
-						<div class="row">
-							<div class="col-md-2">
-								<div class="img-inner"></div>
-							</div>
-							<div class="col-md-2">
-								<div class="img-inner"></div>
-							</div>'
-							<div class="col-md-2">
-								<div class="img-inner"></div>
-							</div>
-							<div class="col-md-2">
-								<div class="img-inner"></div>
-							</div>
-							<div class="col-md-2">
-								<div class="img-inner"></div>
-							</div>
-						</div>
-					</div>
-				</div>
+			<div className="tab-content">
+				<IMGPane />
 			</div>
-
 		</div>
 	);
 }
-
 export default BLevelContentTwoThousand

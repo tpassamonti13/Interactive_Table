@@ -1,6 +1,6 @@
 .nav
 {
-	width: 3410px;
+	width: 3450px;
 	border-bottom: 15px solid #ED1B2E;
 	background-color: #292929;
 }
@@ -24,17 +24,11 @@
 {
 	height: 400px;
 }
-.col-md-2
-{
-    width: 14.1% !important;
-}
 .tab-content
 {
-	margin-top: 25px;
-}
-.img-inner
-{
-	height: 100%;
-	width: 100%;
-	background-color: #ED1B2E;
+	margin-top: 0px;
+	width: 3450px;
+	height: 1210px;
+	overflow-y: scroll;
+	overflow-x: hidden;
 }

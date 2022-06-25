@@ -1,13 +1,15 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import HCGTButton from '../../components/HCGTButton.js';
 import '../../App.css';
 import './Pages.css';
 
-
 function Today()
 {
+	const navigate = useNavigate();
+	
 	return (
-		<div className='tableArea'>
+		<div onClick={() => navigate('/')}>
 			<div className='tableLeft'>
 				<h1 className='backgroundTextTop'>2010-NOW</h1>
 				<div className='videoPlaylistContainer'>
