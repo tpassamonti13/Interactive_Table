@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import './HCGTButton.css';
 import { StyleSheet, TouchableOpacity, Text, View } from 'react-native';
 
+
 export default function HCGTButton({ navigation }) {
 
   const navigate = useNavigate();
@@ -15,7 +16,7 @@ export default function HCGTButton({ navigation }) {
   		}
   		else
   		{
-  			console.log('test');
+  			//category.name = navigation;
   		}
   }
 

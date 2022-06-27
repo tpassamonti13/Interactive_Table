@@ -26,6 +26,23 @@
 	top: 50%;
 	transform: translate(-50%, -50%);
 }
+.modalBody
+{
+	height: 100%;
+	padding: 10px;
+	text-align: center;
+}
+.modalBody img
+{
+	height: 90%;
+}
+.modalBody > *
+{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
 .closeModalButton
 {
 	position: absolute;
