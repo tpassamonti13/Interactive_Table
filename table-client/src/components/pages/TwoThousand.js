@@ -43,14 +43,12 @@ export default function TwoThousand()
 
 	function navigateAttract()
 	{
-		/*
 		setIsVisible(false);
 
 		setTimeout(function()
 		{
 			navigate('/');
 		}, 5000);
-		*/
 	}
 
 	return (
