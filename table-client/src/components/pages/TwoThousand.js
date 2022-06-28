@@ -1,65 +1,74 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import HCGTButton from '../../components/HCGTButton.js';
 import CultureTwoThousands from '../views/CultureTwoThousands.js'
 import TechnologyTwoThousands from '../views/TechnologyTwoThousands.js'
-import { decade } from './Attract';
+import GrowthTwoThousands from '../views/GrowthTwoThousands.js'
+import VideoTwoThousands from '../views/VideoTwoThousands'
 import '../../App.css';
 import './Pages.css';
+import '../HCGTButton.css'
 
 export default function TwoThousand()
 {
 	const navigate = useNavigate();
+
 	const [isVisible, setIsVisible] = useState(true);
 	const [isVisibleCulture, setIsVisibleCulture] = useState(true);
 	const [isVisibleTechnology, setIsVisibleTechnology] = useState(false);
 	const [isVisibleGrowth, setIsVisibleGrowth] = useState(false);
-	const className = (isVisible ? "fadeIn" : "fadeOut");
+
+	const className1 = (isVisible ? "fadeIn" : "fadeOut");
+	const className2 = (isVisibleCulture ? "categoryFadeIn" : "categoryFadeOut");
+	const className3 = (isVisibleTechnology ? "categoryFadeIn" : "categoryFadeOut");
+	const className4 = (isVisibleGrowth ? "categoryFadeIn" : "categoryFadeOut");
 	
-	// Sets a timeout for the kiosk. Returns to the Attract screen if the kiosk is timedout
+	/* Sets a timeout for the kiosk. Returns to the Attract screen if the kiosk is timedout
 	var timeoutKiosk = window.setTimeout(function()
 	{
 		navigate('/');
 	}, 300000);
+	*/
 
 	function resetTimeout()
 	{
+		/*
 		clearTimeout(timeoutKiosk);
 
 		timeoutKiosk = window.setTimeout(function()
 		{
 			navigate('/');
 		}, 300000);
+		*/
 	}
 
 	function navigateAttract()
 	{
+		/*
 		setIsVisible(false);
 
 		setTimeout(function()
 		{
 			navigate('/');
 		}, 5000);
+		*/
 	}
 
 	return (
-			<div className = {className} onClick={() => resetTimeout()}>
+			<div className = {className1} onClick={() => resetTimeout()}>
 				<div className='tableLeft'>
-					<h1 className='backgroundTextTop'>{decade.backgroundTextString}</h1>
-					<div className='videoPlaylistContainer'>
-					</div>
-					<div className='largeVideoThumbnailContainer'>
-					</div>
-					<div className='videoTitleArea'>
-					</div>
+					<h1 className='backgroundTextTop'>2000-2009</h1>
+					<VideoTwoThousands />
 				</div>
 				<div className='tableRight'>
 					<div className='bLevelContentArea'>
-						<div style={{ display: isVisibleCulture ? "block" : "none" }}>
+						<div className={className2}>
 							<CultureTwoThousands />
 						</div>
-						<div style={{ display: isVisibleTechnology ? "block" : "none" }}>
+						<div className={className3}>
 							<TechnologyTwoThousands />
+						</div>
+						<div className={className4}>
+							<GrowthTwoThousands />
 						</div>
 					</div>
 					<div className='hcgtButtonsContainer'>
@@ -68,7 +77,7 @@ export default function TwoThousand()
 						<button className='HCGTButton' onClick={() => {setIsVisibleCulture(false); setIsVisibleTechnology(true); setIsVisibleGrowth(false);}}></button>
 						<button className='HCGTButton' onClick={() => {setIsVisibleCulture(false); setIsVisibleTechnology(false); setIsVisibleGrowth(true);}}></button>
 					</div>
-					<h1 className='backgroundTextBottom'>{decade.backgroundTextString}</h1>
+					<h1 className='backgroundTextBottom'>2000-2009</h1>
 				</div>
 			</div>
 	);

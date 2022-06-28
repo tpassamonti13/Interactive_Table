@@ -8,21 +8,34 @@ function importAll(r)
   return r.keys().map(r);
 }
 
-const generalImages = importAll(require.context('../../images/00s/Culture/General', false, /\.(PNG|png|jpe?g|svg)$/));
-const caciTimesCultureStoriesImages = importAll(require.context('../../images/00s/Culture/CACI_Times/Culture_Stories_of_Interest', false, /\.(PNG|png|jpe?g|svg)$/));
-const mediaCoverageImages = importAll(require.context('../../images/00s/Culture/CACI_Times/Culture_Stories_of_Interest', false, /\.(PNG|png|jpe?g|svg)$/));
+// General Category
+const generalImages = importAll(require.context('../../images/00s/Technology/General', false, /\.(PNG|png|jpe?g|svg)$/));
+const generalDocuments = importAll(require.context('../../documents/00s/Technology/General', false, /\.(pdf)$/));
+
+// Media Coverage Category
+const mediaCoverageImages = importAll(require.context('../../images/00s/Technology/Media_Coverage', false, /\.(PNG|png|jpe?g|svg)$/));
 
 function TechnologyTwoThousands()
 {
 	const [isVisible, setIsVisible] = useState(false);
 	const [modalContent, setModalContent] = useState();
 
+	const className = 'bLevelContentModal ' + (isVisible ? "modalFadeIn" : "modalFadeOut");
+
 	const toggleModal = (e) =>
 	{
 		if (isVisible == false)
 		{
 			setIsVisible(!isVisible);
-			setModalContent('<img src=' + e.target.getAttribute('data-src') + '/>');
+
+			if (e.currentTarget.classList.contains('document'))
+			{
+				setModalContent('<div class="hideDocumentButtons"></div><div class="hideDocumentButtons"></div><embed type="application/pdf" width="1800" height="1000" src=' + e.target.getAttribute('data-src') + '?toolbar=0></embed>');
+			}
+			else
+			{
+				setModalContent('<img loading="lazy" src=' + e.target.getAttribute('data-src') + '/>');
+			}
 		}
 		else
 		{
@@ -32,31 +45,34 @@ function TechnologyTwoThousands()
 
 		var renderedGeneralOutput = generalImages.map(item => <div onClick={toggleModal} className="col-md-2"><div className="imgPane"><img src={item} data-src={item}/></div></div>);
 
-		var renderedCACITimesCultureStoriesOutput = caciTimesCultureStoriesImages .map(item => <div onClick={toggleModal} className="col-md-2"><div className="imgPane"><img src={item} data-src={item}/></div></div>);
+		renderedGeneralOutput[0] = <div onClick={toggleModal} className="col-md-2 document"><div className="imgPane"><img loading="lazy" src={generalImages[0]} data-src={generalDocuments[0]} alt=''/></div></div>;
+
+		var renderedMediaCoveragelOutput = mediaCoverageImages.map(item => <div onClick={toggleModal} className="col-md-2"><div className="imgPane"><img src={item} data-src={item}/></div></div>);
 
 		return (
 			<div>
 				<ul className="nav nav-pills nav-fill" role="tablist">
 				  <li className="nav-item" role="presentation">
-					<a className="nav-link active" id="general-tab" data-bs-toggle="tab" data-bs-target="#general" type="button" role="tab" aria-controls="general" aria-selected="true"><strong>General</strong></a>
+					<a className="nav-link active" id="generalTechnology-tab" data-bs-toggle="tab" data-bs-target="#generalTechnology" type="button" role="tab" aria-controls="generalTechnology" aria-selected="true"><strong>General</strong></a>
 				  </li>
 				  <li className="nav-item" role="presentation">
-					<a className="nav-link" id="mediaCoverage-tab" data-bs-toggle="tab" data-bs-target="#mediaCoverage" type="button" role="tab" aria-controls="mediaCoverage" aria-selected="false"><strong>Media Coverage</strong></a>
+					<a className="nav-link" id="mediaCoverageTechnology-tab" data-bs-toggle="tab" data-bs-target="#mediaCoverageTechnology" type="button" role="tab" aria-controls="mediaCoverageTechnology" aria-selected="false"><strong>Media Coverage</strong></a>
 				  </li>
 				</ul>
 
 				<div className="tab-content">
-					<div className="tab-pane fade show active" id="general" role="tabpanel" aria-labelledby="general-tab">
+					<div className="tab-pane fade show active" id="generalTechnology" role="tabpanel" aria-labelledby="generalTechnology-tab">
 						<div className='row'>
 							{renderedGeneralOutput}
 						</div>
 					</div>
-					<div className="tab-pane fade" id="employeeRecognition" role="tabpanel" aria-labelledby="employeeRecognition-tab">
+					<div className="tab-pane fade" id="mediaCoverageTechnology" role="tabpanel" aria-labelledby="mediaCoverageTechnology-tab">
 						<div className='row'>
+							{renderedMediaCoveragelOutput}
 						</div>
 					</div>
 				</div>
-				<div className='bLevelContentModal' style={{ display: isVisible ? "block" : "none" }}>
+				<div className={className}>
 					<div className='modalBackground'>
 						<div className="modalContent">
 							<button onClick={() => toggleModal() }  type="button" className="closeModalButton">X</button>

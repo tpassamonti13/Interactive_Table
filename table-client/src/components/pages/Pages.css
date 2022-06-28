@@ -1,12 +1,28 @@
 .fadeOut
 {
 	opacity: 0;
-	transition: opacity 0.8s;
+	transition: opacity 0.8s linear;
 }
 .fadeIn
 {
 	opacity: 1;
-	transition: opacity 0.8s;
+	transition: opacity 0.8s linear;
+}
+.categoryFadeOut
+{
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity .8s linear;
+	position: absolute;
+	top: 0;
+}
+.categoryFadeIn
+{
+	opacity: 1;
+	visibility: visible;
+	transition: opacity .8s linear;
+	position: absolute;
+	top: 0;
 }
 .tableArea
 {
@@ -84,34 +100,6 @@
 	position: absolute;
 	bottom: 25px;
 	right: 200px;
-}
-.videoPlaylistContainer
-{
-	position: absolute;
-	left: 200px;
-	top: 450px;
-	height: 1660px;
-	width: 800px;
-	border: solid #ED1B2E 20px;
-
-}
-.largeVideoThumbnailContainer
-{
-	position: absolute;
-	right: 200px;
-	top: 450px;
-	width: 2500px;
-	height: 1350px;
-	border: solid #ED1B2E 20px;
-}
-.videoTitleArea
-{
-	position: absolute;
-	bottom: 50px;
-	left: 1142px;
-	height: 250px;
-	width: 2500px;
-	border: solid #ED1B2E 20px;
 }
 .hcgtButtonsContainer
 {

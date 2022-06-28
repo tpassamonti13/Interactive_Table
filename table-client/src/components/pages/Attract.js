@@ -1,15 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import DecadeButton from '../../components/DecadeButton.js';
 import { useNavigate } from "react-router-dom";
 import { StartVideo } from '../../components/Video';
 import logo from '../../images/caciLogo.png';
 import '../../App.css';
 import './Pages.css';
-
-export let decade = {
-	name: '',
-	backgroundTextString: ''
-}
 
 export default function Attract()
 {
@@ -21,18 +16,19 @@ export default function Attract()
 	{
 		setIsVisible(false);
 
-		setTimeout(function()
+		if (navigation == '/twoThousand')
 		{
-			navigate(navigation);
+			setTimeout(function()
+		{
+			navigate('/twoThousand');
 		}, 5000);
-
-		decade.name = navigation;
-
-		if (navigation = '/twoThousand')
+		}
+		else if (navigation == '/today')
 		{
-			//StartVideo('1');
-			decade.name = navigation
-			decade.backgroundTextString = '2000-2009';
+			setTimeout(function()
+		{
+			navigate('/today');
+		}, 5000);
 		}
 	}
 

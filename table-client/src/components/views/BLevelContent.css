@@ -42,6 +42,14 @@
 	overflow-y: scroll;
 	overflow-x: hidden;
 }
+.caciTimesTabContent
+{
+	margin-top: 115px;
+}
+.employeeRecognitionTabContent
+{
+	margin-top: 315px;
+}
 .col-md-2
 {
 	height: 500px;
@@ -59,4 +67,120 @@
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
+}
+.secondNav
+{
+	position: fixed;
+	top: 565px;
+}
+.tab-pane.fade
+{
+	transition: opacity .35s linear !important;
+}
+.hideDocumentButtons
+{
+	position: absolute;
+	background-color: #38383d;
+}
+.hideDocumentButtons:nth-of-type(1)
+{
+	width: 90px;
+	height: 30px;
+	top: 96px;
+	left: 427px;
+	z-index: 3;
+}
+.hideDocumentButtons:nth-of-type(2)
+{
+	width: 120px;
+	height: 30px;
+	top: 96px;
+	left: 2117px;
+	z-index: 3;
+}
+.videoPlaylistContainer
+{
+	position: absolute;
+	left: 200px;
+	top: 450px;
+	height: 1660px;
+	width: 950px;
+	overflow-y: scroll;
+
+}
+.largeVideoThumbnailContainer
+{
+	position: absolute;
+	right: 200px;
+	top: 450px;
+	width: 2400px;
+	height: 1350px;
+	border: solid #ED1B2E 20px;
+}
+.largeVideoThumbnailContainer button
+{
+	width: 800px;
+	height: 800px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	background-color: rgba(64, 64, 64, 0.5);
+	outline: none;
+	border: 0;
+	border-radius: 500px;
+	color: #fff;
+	transform: translate(-50%, -50%);
+	font-size: 84px;
+}
+.largeVideoThumbnailContainer button.play:before
+{
+	content: 'PLAY';
+}
+.largeVideoThumbnailContainer button.pause:before
+{
+	content: 'PAUSE';
+}
+.videoTitleArea
+{
+	position: absolute;
+	bottom: 50px;
+	left: 1242px;
+	height: 250px;
+	width: 2400px;
+	border: solid #ED1B2E 20px;
+}
+.videoThumbnailInfoContainer
+{
+	position: relative;
+	height: 300px;
+	width: 100%;
+}
+.videoThumbnailContainer
+{
+	position: relative;
+	display: inline-block;
+	float: left;
+	width: 50%;
+	height: 100%;
+}
+.videoInfoContainer
+{
+	position: relative;
+	display: inline-block;
+	float: right;
+	width: 50%;
+	height: 100%;
+	padding: 25px;
+	padding-top: 75px;
+	color: #fff;
+}
+.videoThumbnail
+{
+	width: 450px;
+	height: 253px;
+	background-color: blue;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
