@@ -24,7 +24,7 @@ function TechnologyTwoThousands()
 
 	const toggleModal = (e) =>
 	{
-		if (isVisible == false)
+		if (isVisible === false)
 		{
 			setIsVisible(!isVisible);
 
@@ -43,20 +43,20 @@ function TechnologyTwoThousands()
 		}
 	}
 
-		var renderedGeneralOutput = generalImages.map(item => <div onClick={toggleModal} className="col-md-2"><div className="imgPane"><img src={item} data-src={item}/></div></div>);
+		var renderedGeneralOutput = generalImages.map(item => <div onClick={toggleModal} className="col-md-2"><div className="imgPane"><img alt="" loading="lazy" src={item} data-src={item}/></div></div>);
 
-		renderedGeneralOutput[0] = <div onClick={toggleModal} className="col-md-2 document"><div className="imgPane"><img loading="lazy" src={generalImages[0]} data-src={generalDocuments[0]} alt=''/></div></div>;
+		renderedGeneralOutput[0] = <div onClick={toggleModal} className="col-md-2 document"><div className="imgPane"><img alt="" loading="lazy" src={generalImages[0]} data-src={generalDocuments[0]} /></div></div>;
 
-		var renderedMediaCoveragelOutput = mediaCoverageImages.map(item => <div onClick={toggleModal} className="col-md-2"><div className="imgPane"><img src={item} data-src={item}/></div></div>);
+		var renderedMediaCoveragelOutput = mediaCoverageImages.map(item => <div onClick={toggleModal} className="col-md-2"><div className="imgPane"><img alt="" src={item} data-src={item}/></div></div>);
 
 		return (
 			<div>
 				<ul className="nav nav-pills nav-fill" role="tablist">
 				  <li className="nav-item" role="presentation">
-					<a className="nav-link active" id="generalTechnology-tab" data-bs-toggle="tab" data-bs-target="#generalTechnology" type="button" role="tab" aria-controls="generalTechnology" aria-selected="true"><strong>General</strong></a>
+					<button className="nav-link active" id="generalTechnology-tab" data-bs-toggle="tab" data-bs-target="#generalTechnology" type="button" role="tab" aria-controls="generalTechnology" aria-selected="true"><strong>General</strong></button>
 				  </li>
 				  <li className="nav-item" role="presentation">
-					<a className="nav-link" id="mediaCoverageTechnology-tab" data-bs-toggle="tab" data-bs-target="#mediaCoverageTechnology" type="button" role="tab" aria-controls="mediaCoverageTechnology" aria-selected="false"><strong>Media Coverage</strong></a>
+					<button className="nav-link" id="mediaCoverageTechnology-tab" data-bs-toggle="tab" data-bs-target="#mediaCoverageTechnology" type="button" role="tab" aria-controls="mediaCoverageTechnology" aria-selected="false"><strong>Media Coverage</strong></button>
 				  </li>
 				</ul>
 

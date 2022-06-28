@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import './BLevelContent.css';
 import '../../components/Modal.css';
-import {Magnifier, GlassMagnifier, SideBySideMagnifier, PictureInPictureMagnifier, MOUSE_ACTIVATION,TOUCH_ACTIVATION } from "react-image-magnifiers";
 
 //Function to import all images & documents
 function importAll(r) 

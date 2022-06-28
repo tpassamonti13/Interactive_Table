@@ -35,7 +35,7 @@ function GrowthTwoThousands()
 
 	const toggleModal = (e) =>
 	{
-		if (isVisible == false)
+		if (isVisible === false)
 		{
 			setIsVisible(!isVisible);
 
@@ -54,28 +54,28 @@ function GrowthTwoThousands()
 		}
 	}
 
-		var renderedGeneralOutput = generalImages.map(item => <div onClick={toggleModal} className="col-md-2"><div className="imgPane"><img src={item} data-src={item}/></div></div>);
+		var renderedGeneralOutput = generalImages.map(item => <div onClick={toggleModal} className="col-md-2"><div className="imgPane"><img alt="" loading="lazy" src={item} data-src={item}/></div></div>);
 
 		var annualReportOutput = annualReportImages.map((item, index) => <div onClick={toggleModal} className="col-md-2 document"><div className="imgPane"><img loading="lazy" src={item} data-src={annualReportDocuments[index]} alt=''/></div></div>);
 
-		var asymmOutput = asymmImages.map((item, index) => <div onClick={toggleModal} className="col-md-2 document"><div className="imgPane"><img loading="lazy" src={item} data-src={asymmDocuments[index]} alt=''/></div></div>);
+		var asymmOutput = asymmImages.map((item, index) => <div onClick={toggleModal} className="col-md-2 document"><div className="imgPane"><img alt="" loading="lazy" src={item} data-src={asymmDocuments[index]} /></div></div>);
 
-		var mediaCoverageOutput = mediaCoverageImages.map(item => <div onClick={toggleModal} className="col-md-2"><div className="imgPane"><img src={item} data-src={item}/></div></div>);
+		var mediaCoverageOutput = mediaCoverageImages.map(item => <div onClick={toggleModal} className="col-md-2"><div className="imgPane"><img alt="" loading="lazy" src={item} data-src={item}/></div></div>);
 
 		return (
 			<div>
 				<ul className="nav nav-pills nav-fill" role="tablist">
 				  <li className="nav-item" role="presentation">
-					<a className="nav-link active" id="general-tab" data-bs-toggle="tab" data-bs-target="#generalGrowth" type="button" role="tab" aria-controls="generalGrowth" aria-selected="true"><strong>General</strong></a>
+					<button className="nav-link active" id="general-tab" data-bs-toggle="tab" data-bs-target="#generalGrowth" type="button" role="tab" aria-controls="generalGrowth" aria-selected="true"><strong>General</strong></button>
 				  </li>
 				  <li className="nav-item" role="presentation">
-					<a className="nav-link" id="annualReports-tab" data-bs-toggle="tab" data-bs-target="#annualReports" type="button" role="tab" aria-controls="annualReports" aria-selected="false"><strong>Annual Reports</strong></a>
+					<button className="nav-link" id="annualReports-tab" data-bs-toggle="tab" data-bs-target="#annualReports" type="button" role="tab" aria-controls="annualReports" aria-selected="false"><strong>Annual Reports</strong></button>
 				  </li>
 				  <li className="nav-item" role="presentation">
-					<a className="nav-link" id="asymm-tab" data-bs-toggle="tab" data-bs-target="#asymm" type="button" role="tab" aria-controls="asymm" aria-selected="false"><strong>Asymmetric Threat Symposium</strong></a>
+					<button className="nav-link" id="asymm-tab" data-bs-toggle="tab" data-bs-target="#asymm" type="button" role="tab" aria-controls="asymm" aria-selected="false"><strong>Asymmetric Threat Symposium</strong></button>
 				  </li>
 				  <li className="nav-item" role="presentation">
-					<a className="nav-link" id="mediaCoverage-tab" data-bs-toggle="tab" data-bs-target="#mediaCoverage" type="button" role="tab" aria-controls="mediaCoverage" aria-selected="false"><strong>Media Coverage</strong></a>
+					<button className="nav-link" id="mediaCoverage-tab" data-bs-toggle="tab" data-bs-target="#mediaCoverage" type="button" role="tab" aria-controls="mediaCoverage" aria-selected="false"><strong>Media Coverage</strong></button>
 				  </li>
 				</ul>
 

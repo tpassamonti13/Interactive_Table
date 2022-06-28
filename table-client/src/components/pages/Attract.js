@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
 import DecadeButton from '../../components/DecadeButton.js';
 import { useNavigate } from "react-router-dom";
 import { StartVideo } from '../../components/Video';
@@ -16,14 +16,14 @@ export default function Attract()
 	{
 		setIsVisible(false);
 
-		if (navigation == '/twoThousand')
+		if (navigation === '/twoThousand')
 		{
 			setTimeout(function()
 		{
 			navigate('/twoThousand');
 		}, 5000);
 		}
-		else if (navigation == '/today')
+		else if (navigation === '/today')
 		{
 			setTimeout(function()
 		{
@@ -39,7 +39,7 @@ export default function Attract()
 					<div className='row h-100'>
 						<div className='col-md-12 text-center'>
 							<div className='buttonContainer'>
-								<img src={logo} alt="Logo" width="60%" />
+								<img src={logo} alt="" width="60%" />
 							</div>
 						</div>
 					</div>

@@ -11,14 +11,23 @@ const videoThumbnails = importAll(require.context('../../images/Video_Thumbnails
 
 export default function VideoTwoThousands()
 {
-	var renderedvideoThumbnails = videoThumbnails.map(item => <div className="videoThumbnailInfoContainer"><div className="videoThumbnailContainer"><div className='videoThumbnail'><img src={item} data-src={item} width="100%" height="100%" /></div></div><div className="videoInfoContainer"><h1>{item}</h1><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu lobortis elementum nibh tellus molestie nunc non blandit massa.</p></div></div>);
+	const [mainThumbnail, setMainThumbnail] = useState(<img alt="" src = "" width="100%" height="100%" />);
+
+	function changeThumbnail(thumbnail)
+	{
+		setMainThumbnail(<img alt="" src={thumbnail}  width="100%" height="100%" />);
+
+		console.log(thumbnail);
+	}
+
+	var renderedVideoThumbnails = videoThumbnails.map(item => <div className="videoThumbnailInfoContainer" onClick={() => changeThumbnail({item})}><div className="videoThumbnailContainer"><div className='videoThumbnail'><img loading="lazy" alt="" src={item} data-src={item} width="100%" height="100%" /></div></div><div className="videoInfoContainer"><h1>{item}</h1><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu lobortis elementum nibh tellus molestie nunc non blandit massa.</p></div></div>);
 
 	return (
 			<>
 				<div className='videoPlaylistContainer'>
-					{renderedvideoThumbnails}
+					{renderedVideoThumbnails}
 				</div>
-				<div className='largeVideoThumbnailContainer'>
+				<div className='largeVideoThumbnailContainer' dangerouslySetInnerHTML={{__html: mainThumbnail}}>
 				</div>
 				<div className='videoTitleArea'>
 				</div>

@@ -132,10 +132,10 @@ function CultureTwoThousands()
 					<div className="tab-pane fade" id="caciTimes" role="tabpanel" aria-labelledby="caciTimes-tab">
 						<ul className="nav nav-pills nav-fill secondNav" role="tablist">
 							  <li className="nav-item" role="presentation">
-								<a className="nav-link active" id="completeIssues-tab" data-bs-toggle="tab" data-bs-target="#completeIssues" type="button" role="tab" aria-controls="completeIssues" aria-selected="true"><strong>Complete Issues</strong></a>
+								<button className="nav-link active" id="completeIssues-tab" data-bs-toggle="tab" data-bs-target="#completeIssues" type="button" role="tab" aria-controls="completeIssues" aria-selected="true"><strong>Complete Issues</strong></button>
 							  </li>
 							  <li className="nav-item" role="presentation">
-								<a className="nav-link" id="cultureStories-tab" data-bs-toggle="tab" data-bs-target="#cultureStories" type="button" role="tab" aria-controls="cultureStories" aria-selected="false"><strong>Culture Stories of Interest</strong></a>
+								<button className="nav-link" id="cultureStories-tab" data-bs-toggle="tab" data-bs-target="#cultureStories" type="button" role="tab" aria-controls="cultureStories" aria-selected="false"><strong>Culture Stories of Interest</strong></button>
 							  </li>
 						</ul>
 						<div className="tab-content caciTimesTabContent">
@@ -154,37 +154,37 @@ function CultureTwoThousands()
 					<div className="tab-pane fade" id="employeeRecognition" role="tabpanel" aria-labelledby="employeeRecognition-tab">
 						<ul className="nav nav-pills nav-fill secondNav" role="tablist">
 							  <li className="nav-item" role="presentation">
-								<a className="nav-link active" id="admiralMoorer2005-tab" data-bs-toggle="tab" data-bs-target="#admiralMoorer2005" type="button" role="tab" aria-controls="admiralMoorer2005" aria-selected="true"><strong>Admiral Moorer Awards 2005</strong></a>
+								<button className="nav-link active" id="admiralMoorer2005-tab" data-bs-toggle="tab" data-bs-target="#admiralMoorer2005" type="button" role="tab" aria-controls="admiralMoorer2005" aria-selected="true"><strong>Admiral Moorer Awards 2005</strong></button>
 							  </li>
 							  <li className="nav-item" role="presentation">
-								<a className="nav-link" id="admiralMoorer2009-tab" data-bs-toggle="tab" data-bs-target="#admiralMoorer2009" type="button" role="tab" aria-controls="admiralMoorer2009" aria-selected="false"><strong>Admiral Moorer Awards 2009</strong></a>
+								<button className="nav-link" id="admiralMoorer2009-tab" data-bs-toggle="tab" data-bs-target="#admiralMoorer2009" type="button" role="tab" aria-controls="admiralMoorer2009" aria-selected="false"><strong>Admiral Moorer Awards 2009</strong></button>
 							  </li>
 							  <li className="nav-item" role="presentation">
-								<a className="nav-link" id="awardsCeremony2008-tab" data-bs-toggle="tab" data-bs-target="#awardsCeremony2008" type="button" role="tab" aria-controls="awardsCeremony2008" aria-selected="false"><strong>Awards Ceremony June 2008</strong></a>
+								<button className="nav-link" id="awardsCeremony2008-tab" data-bs-toggle="tab" data-bs-target="#awardsCeremony2008" type="button" role="tab" aria-controls="awardsCeremony2008" aria-selected="false"><strong>Awards Ceremony June 2008</strong></button>
 							  </li>
 							  <li className="nav-item" role="presentation">
-								<a className="nav-link" id="awardsCeremony2009-tab" data-bs-toggle="tab" data-bs-target="#awardsCeremony2009" type="button" role="tab" aria-controls="awardsCeremony2009" aria-selected="false"><strong>Awards Ceremony October 2009</strong></a>
+								<button className="nav-link" id="awardsCeremony2009-tab" data-bs-toggle="tab" data-bs-target="#awardsCeremony2009" type="button" role="tab" aria-controls="awardsCeremony2009" aria-selected="false"><strong>Awards Ceremony October 2009</strong></button>
 							  </li>
 							  <li className="nav-item" role="presentation">
-								<a className="nav-link" id="awardsProgram2009-tab" data-bs-toggle="tab" data-bs-target="#awardsProgram2009" type="button" role="tab" aria-controls="awardsProgram2009" aria-selected="false"><strong>Awards Program February 2009</strong></a>
+								<button className="nav-link" id="awardsProgram2009-tab" data-bs-toggle="tab" data-bs-target="#awardsProgram2009" type="button" role="tab" aria-controls="awardsProgram2009" aria-selected="false"><strong>Awards Program February 2009</strong></button>
 							  </li>
 							  <li className="nav-item" role="presentation">
-								<a className="nav-link" id="celebrationDistinction2003-tab" data-bs-toggle="tab" data-bs-target="#celebrationDistinction2003" type="button" role="tab" aria-controls="celebrationDistinction2003" aria-selected="false"><strong>Celebration of Distinction 2003</strong></a>
+								<button className="nav-link" id="celebrationDistinction2003-tab" data-bs-toggle="tab" data-bs-target="#celebrationDistinction2003" type="button" role="tab" aria-controls="celebrationDistinction2003" aria-selected="false"><strong>Celebration of Distinction 2003</strong></button>
 							  </li>
 							  <li className="nav-item" role="presentation">
-								<a className="nav-link" id="celebrationDistinction2005-tab" data-bs-toggle="tab" data-bs-target="#celebrationDistinction2005" type="button" role="tab" aria-controls="celebrationDistinction2005" aria-selected="false"><strong>Celebration of Distinction 2005</strong></a>
+								<button className="nav-link" id="celebrationDistinction2005-tab" data-bs-toggle="tab" data-bs-target="#celebrationDistinction2005" type="button" role="tab" aria-controls="celebrationDistinction2005" aria-selected="false"><strong>Celebration of Distinction 2005</strong></button>
 							  </li>
 							  <li className="nav-item" role="presentation">
-								<a className="nav-link" id="celebrationDistinction2006-tab" data-bs-toggle="tab" data-bs-target="#celebrationDistinction2006" type="button" role="tab" aria-controls="celebrationDistinction2006" aria-selected="false"><strong>Celebration of Distinction 2006</strong></a>
+								<button className="nav-link" id="celebrationDistinction2006-tab" data-bs-toggle="tab" data-bs-target="#celebrationDistinction2006" type="button" role="tab" aria-controls="celebrationDistinction2006" aria-selected="false"><strong>Celebration of Distinction 2006</strong></button>
 							  </li>
 							  <li className="nav-item" role="presentation">
-								<a className="nav-link" id="celebrationDistinction2007-tab" data-bs-toggle="tab" data-bs-target="#celebrationDistinction2007" type="button" role="tab" aria-controls="celebrationDistinction2007" aria-selected="false"><strong>Celebration of Distinction 2007</strong></a>
+								<button className="nav-link" id="celebrationDistinction2007-tab" data-bs-toggle="tab" data-bs-target="#celebrationDistinction2007" type="button" role="tab" aria-controls="celebrationDistinction2007" aria-selected="false"><strong>Celebration of Distinction 2007</strong></button>
 							  </li>
 							  <li className="nav-item" role="presentation">
-								<a className="nav-link" id="celebrationDistinction2008-tab" data-bs-toggle="tab" data-bs-target="#celebrationDistinction2008" type="button" role="tab" aria-controls="celebrationDistinction2008" aria-selected="false"><strong>Celebration of Distinction 2008</strong></a>
+								<button className="nav-link" id="celebrationDistinction2008-tab" data-bs-toggle="tab" data-bs-target="#celebrationDistinction2008" type="button" role="tab" aria-controls="celebrationDistinction2008" aria-selected="false"><strong>Celebration of Distinction 2008</strong></button>
 							  </li>
 							  <li className="nav-item" role="presentation">
-								<a className="nav-link" id="sailingAheadDistinction2007-tab" data-bs-toggle="tab" data-bs-target="#sailingAheadDistinction2007" type="button" role="tab" aria-controls="sailingAheadDistinction2007" aria-selected="false"><strong>Sailing Ahead Distinction Awards 2007</strong></a>
+								<button className="nav-link" id="sailingAheadDistinction2007-tab" data-bs-toggle="tab" data-bs-target="#sailingAheadDistinction2007" type="button" role="tab" aria-controls="sailingAheadDistinction2007" aria-selected="false"><strong>Sailing Ahead Distinction Awards 2007</strong></button>
 							  </li>
 						</ul>
 						<div className="tab-content employeeRecognitionTabContent">
@@ -253,28 +253,28 @@ function CultureTwoThousands()
 					<div className="tab-pane fade" id="philantropy" role="tabpanel" aria-labelledby="philantropy-tab">
 						<ul className="nav nav-pills nav-fill" role="tablist">
 							  <li className="nav-item" role="presentation">
-								<a className="nav-link active" id="americanHeartApril2009-tab" data-bs-toggle="tab" data-bs-target="#americanHeartApril2009" type="button" role="tab" aria-controls="americanHeartApril2009" aria-selected="false"><strong>American Heart Association Fair April 2009</strong></a>
+								<button className="nav-link active" id="americanHeartApril2009-tab" data-bs-toggle="tab" data-bs-target="#americanHeartApril2009" type="button" role="tab" aria-controls="americanHeartApril2009" aria-selected="false"><strong>American Heart Association Fair April 2009</strong></button>
 							  </li>
 							  <li className="nav-item" role="presentation">
-								<a className="nav-link" id="americanHeartJuly2009-tab" data-bs-toggle="tab" data-bs-target="#americanHeartJuly2009" type="button" role="tab" aria-controls="americanHeartJuly2009" aria-selected="false"><strong>American Heart Association Golf Tournament July 2009</strong></a>
+								<button className="nav-link" id="americanHeartJuly2009-tab" data-bs-toggle="tab" data-bs-target="#americanHeartJuly2009" type="button" role="tab" aria-controls="americanHeartJuly2009" aria-selected="false"><strong>American Heart Association Golf Tournament July 2009</strong></button>
 							  </li>
 							  <li className="nav-item" role="presentation">
-								<a className="nav-link" id="americanHeartWalk-tab" data-bs-toggle="tab" data-bs-target="#americanHeartWalk" type="button" role="tab" aria-controls="americanHeartWalk" aria-selected="false"><strong>American Heart Association Heart Walk 2009</strong></a>
+								<button className="nav-link" id="americanHeartWalk-tab" data-bs-toggle="tab" data-bs-target="#americanHeartWalk" type="button" role="tab" aria-controls="americanHeartWalk" aria-selected="false"><strong>American Heart Association Heart Walk 2009</strong></button>
 							  </li>
 							  <li className="nav-item" role="presentation">
-								<a className="nav-link" id="angelTree-tab" data-bs-toggle="tab" data-bs-target="#angelTree" type="button" role="tab" aria-controls="angelTree" aria-selected="false"><strong>Angel Tree December 2005</strong></a>
+								<button className="nav-link" id="angelTree-tab" data-bs-toggle="tab" data-bs-target="#angelTree" type="button" role="tab" aria-controls="angelTree" aria-selected="false"><strong>Angel Tree December 2005</strong></button>
 							  </li>
 							  <li className="nav-item" role="presentation">
-								<a className="nav-link" id="usoCarePackage-tab" data-bs-toggle="tab" data-bs-target="#usoCarePackage" type="button" role="tab" aria-controls="usoCarePackage" aria-selected="false"><strong>USO Care Package Project May 2009</strong></a>
+								<button className="nav-link" id="usoCarePackage-tab" data-bs-toggle="tab" data-bs-target="#usoCarePackage" type="button" role="tab" aria-controls="usoCarePackage" aria-selected="false"><strong>USO Care Package Project May 2009</strong></button>
 							  </li>
 							  <li className="nav-item" role="presentation">
-								<a className="nav-link" id="usoCarePackage2-tab" data-bs-toggle="tab" data-bs-target="#usoCarePackage2" type="button" role="tab" aria-controls="usoCarePackage2" aria-selected="false"><strong>USO Operation Care Package May 2009</strong></a>
+								<button className="nav-link" id="usoCarePackage2-tab" data-bs-toggle="tab" data-bs-target="#usoCarePackage2" type="button" role="tab" aria-controls="usoCarePackage2" aria-selected="false"><strong>USO Operation Care Package May 2009</strong></button>
 							  </li>
 							  <li className="nav-item" role="presentation">
-								<a className="nav-link" id="juniorBowl-tab" data-bs-toggle="tab" data-bs-target="#juniorBowl" type="button" role="tab" aria-controls="juniorBowl" aria-selected="false"><strong>Junior Bowl-A-Thon March 2009</strong></a>
+								<button className="nav-link" id="juniorBowl-tab" data-bs-toggle="tab" data-bs-target="#juniorBowl" type="button" role="tab" aria-controls="juniorBowl" aria-selected="false"><strong>Junior Bowl-A-Thon March 2009</strong></button>
 							  </li>
 							  <li className="nav-item" role="presentation">
-								<a className="nav-link" id="toysForTots-tab" data-bs-toggle="tab" data-bs-target="#toysForTots" type="button" role="tab" aria-controls="toysForTots" aria-selected="false"><strong>Toys For Tots December 2008</strong></a>
+								<button className="nav-link" id="toysForTots-tab" data-bs-toggle="tab" data-bs-target="#toysForTots" type="button" role="tab" aria-controls="toysForTots" aria-selected="false"><strong>Toys For Tots December 2008</strong></button>
 							  </li>
 						</ul>
 						<div className="tab-content">

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import CultureToday from '../views/CultureToday'
 import TechnologyTwoThousands from '../views/TechnologyTwoThousands.js'
@@ -17,25 +17,44 @@ export default function TwoThousand()
 	const [isVisibleGrowth, setIsVisibleGrowth] = useState(false);
 
 	const className = (isVisible ? "fadeIn" : "fadeOut");
+
+	const [timer, setTimer] = useState(0);
 	
-	/* Sets a timeout for the kiosk. Returns to the Attract screen if the kiosk is timedout
-	var timeoutKiosk = window.setTimeout(function()
+	//Sets a timeout for the kiosk. Returns to the Attract screen if the kiosk is timedout
+	useEffect(() => 
 	{
-		navigate('/');
-	}, 300000);
-	*/
+		setTimer(timer => setTimeout(() => 
+  		{
+  			setIsVisible(false);
 
-	function resetTimeout()
+			setTimeout(function()
+			{
+				navigate('/');
+			}, 5000);
+  		}, 600000));
+
+  		return () => clearTimeout(timer);
+	
+	}, []);
+
+	const resetTimeout = () => 
 	{
-		/*
-		clearTimeout(timeoutKiosk);
+		setTimer(0); 
+		clearTimeout(timer);
 
-		timeoutKiosk = window.setTimeout(function()
-		{
-			navigate('/');
-		}, 300000);
-		*/
+			setTimer(timer => setTimeout(() => 
+	  		{
+	  			setIsVisible(false);
+
+				setTimeout(function()
+				{
+					navigate('/');
+				}, 5000);
+	  		}, 600000));
+
+	  		return () => clearTimeout(timer);
 	}
+
 
 	function navigateAttract()
 	{

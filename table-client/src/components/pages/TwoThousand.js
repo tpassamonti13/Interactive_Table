@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import CultureTwoThousands from '../views/CultureTwoThousands.js'
 import TechnologyTwoThousands from '../views/TechnologyTwoThousands.js'
@@ -17,6 +17,8 @@ export default function TwoThousand()
 	const [isVisibleTechnology, setIsVisibleTechnology] = useState(false);
 	const [isVisibleGrowth, setIsVisibleGrowth] = useState(false);
 
+	const [timer, setTimer] = useState(0);
+
 	const className1 = (isVisible ? "fadeIn" : "fadeOut");
 	const className2 = (isVisibleCulture ? "categoryFadeIn" : "categoryFadeOut");
 	const className3 = (isVisibleTechnology ? "categoryFadeIn" : "categoryFadeOut");
@@ -28,17 +30,38 @@ export default function TwoThousand()
 		navigate('/');
 	}, 300000);
 	*/
-
-	function resetTimeout()
+	useEffect(() => 
 	{
-		/*
-		clearTimeout(timeoutKiosk);
+		setTimer(timer => setTimeout(() => 
+  		{
+  			setIsVisible(false);
 
-		timeoutKiosk = window.setTimeout(function()
-		{
-			navigate('/');
-		}, 300000);
-		*/
+			setTimeout(function()
+			{
+				navigate('/');
+			}, 5000);
+  		}, 600000));
+
+  		return () => clearTimeout(timer);
+	
+	}, []);
+
+	const resetTimeout = () => 
+	{
+		setTimer(0); 
+		clearTimeout(timer);
+
+			setTimer(timer => setTimeout(() => 
+	  		{
+	  			setIsVisible(false);
+
+				setTimeout(function()
+				{
+					navigate('/');
+				}, 5000);
+	  		}, 600000));
+
+	  		return () => clearTimeout(timer);
 	}
 
 	function navigateAttract()
