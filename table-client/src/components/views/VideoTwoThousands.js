@@ -20,7 +20,7 @@ export default function VideoTwoThousands()
 		console.log(thumbnail);
 	}
 
-	var renderedVideoThumbnails = videoThumbnails.map(item => <div className="videoThumbnailInfoContainer" onClick={() => changeThumbnail({item})}><div className="videoThumbnailContainer"><div className='videoThumbnail'><img loading="lazy" alt="" src={item} data-src={item} width="100%" height="100%" /></div></div><div className="videoInfoContainer"><h1>{item}</h1><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu lobortis elementum nibh tellus molestie nunc non blandit massa.</p></div></div>);
+	var renderedVideoThumbnails = videoThumbnails.map(item => <div className="videoThumbnailInfoContainer" onClick={() => changeThumbnail({item})}><div className="videoThumbnailContainer"><div className='videoThumbnail'><img loading="lazy" alt="" src={item} data-src={item} width="100%" height="100%" /></div></div><div className="videoInfoContainer"><h1>{item}</h1></div></div>);
 
 	return (
 			<>

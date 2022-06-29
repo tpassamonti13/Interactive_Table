@@ -13,6 +13,7 @@
 	width: 3450px;
 	border-bottom: 15px solid #ED1B2E;
 	background-color: #292929;
+	z-index: 1;
 }
 .nav-pills .nav-link 
 {
@@ -46,7 +47,8 @@
 {
 	margin-top: 115px;
 }
-.employeeRecognitionTabContent
+.employeeRecognitionTabContent,
+.philanthropyTabContent
 {
 	margin-top: 315px;
 }
@@ -171,7 +173,7 @@
 	width: 50%;
 	height: 100%;
 	padding: 25px;
-	padding-top: 75px;
+	padding-top: 50px;
 	color: #fff;
 }
 .videoThumbnail

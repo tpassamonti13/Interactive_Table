@@ -251,7 +251,7 @@ function CultureTwoThousands()
 						</div>
 					</div>
 					<div className="tab-pane fade" id="philantropy" role="tabpanel" aria-labelledby="philantropy-tab">
-						<ul className="nav nav-pills nav-fill" role="tablist">
+						<ul className="nav nav-pills nav-fill secondNav" role="tablist">
 							  <li className="nav-item" role="presentation">
 								<button className="nav-link active" id="americanHeartApril2009-tab" data-bs-toggle="tab" data-bs-target="#americanHeartApril2009" type="button" role="tab" aria-controls="americanHeartApril2009" aria-selected="false"><strong>American Heart Association Fair April 2009</strong></button>
 							  </li>
@@ -277,7 +277,7 @@ function CultureTwoThousands()
 								<button className="nav-link" id="toysForTots-tab" data-bs-toggle="tab" data-bs-target="#toysForTots" type="button" role="tab" aria-controls="toysForTots" aria-selected="false"><strong>Toys For Tots December 2008</strong></button>
 							  </li>
 						</ul>
-						<div className="tab-content">
+						<div className="tab-content philanthropyTabContent">
 							<div className="tab-pane fade show active" id="americanHeartApril2009" role="tabpanel" aria-labelledby="americanHeartApril2009-tab">
 								<div className='row'>
 									{renderedPhilanthropyAmericanHeartApril2009Images}
