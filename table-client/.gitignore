@@ -24,3 +24,6 @@ yarn-error.log*
 
 #img files
 /src/images
+
+#documents
+/src/documents
