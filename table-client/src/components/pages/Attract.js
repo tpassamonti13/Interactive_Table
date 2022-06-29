@@ -18,17 +18,19 @@ export default function Attract()
 
 		if (navigation === '/twoThousand')
 		{
+      StartVideo('overview_twothousand');
 			setTimeout(function()
-		{
-			navigate('/twoThousand');
-		}, 5000);
-		}
+      {
+        navigate('/twoThousand');
+      }, 5000);
+    }
 		else if (navigation === '/today')
 		{
+      StartVideo('overview_today');
 			setTimeout(function()
-		{
-			navigate('/today');
-		}, 5000);
+      {
+        navigate('/today');
+      }, 5000);
 		}
 	}
 
