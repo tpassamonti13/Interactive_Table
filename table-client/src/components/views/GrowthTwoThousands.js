@@ -54,13 +54,13 @@ function GrowthTwoThousands()
 		}
 	}
 
-		var renderedGeneralOutput = generalImages.map(item => <div onClick={toggleModal} className="col-md-2"><div className="imgPane"><img alt="" loading="lazy" src={item} data-src={item}/></div></div>);
+		var renderedGeneralOutput = generalImages.map(item => <div onTouchStart={toggleModal} className="col-md-2"><div className="imgPane"><img alt="" loading="lazy" src={item} data-src={item}/></div></div>);
 
-		var annualReportOutput = annualReportImages.map((item, index) => <div onClick={toggleModal} className="col-md-2 document"><div className="imgPane"><img loading="lazy" src={item} data-src={annualReportDocuments[index]} alt=''/></div></div>);
+		var annualReportOutput = annualReportImages.map((item, index) => <div onTouchStart={toggleModal} className="col-md-2 document"><div className="imgPane"><img loading="lazy" src={item} data-src={annualReportDocuments[index]} alt=''/></div></div>);
 
-		var asymmOutput = asymmImages.map((item, index) => <div onClick={toggleModal} className="col-md-2 document"><div className="imgPane"><img alt="" loading="lazy" src={item} data-src={asymmDocuments[index]} /></div></div>);
+		var asymmOutput = asymmImages.map((item, index) => <div onTouchStart={toggleModal} className="col-md-2 document"><div className="imgPane"><img alt="" loading="lazy" src={item} data-src={asymmDocuments[index]} /></div></div>);
 
-		var mediaCoverageOutput = mediaCoverageImages.map(item => <div onClick={toggleModal} className="col-md-2"><div className="imgPane"><img alt="" loading="lazy" src={item} data-src={item}/></div></div>);
+		var mediaCoverageOutput = mediaCoverageImages.map(item => <div onTouchStart={toggleModal} className="col-md-2"><div className="imgPane"><img alt="" loading="lazy" src={item} data-src={item}/></div></div>);
 
 		return (
 			<div>
@@ -104,7 +104,7 @@ function GrowthTwoThousands()
 				<div className={className}>
 					<div className='modalBackground'>
 						<div className="modalContent">
-							<button onClick={() => toggleModal() }  type="button" className="closeModalButton">X</button>
+							<button onTouchStart={() => toggleModal() }  type="button" className="closeModalButton">X</button>
 								<div className='modalBody' dangerouslySetInnerHTML={{__html: modalContent}}>
 								</div>
 						</div>

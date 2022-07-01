@@ -277,7 +277,7 @@ function CultureTwoThousands()
 								<button className="nav-link" id="toysForTots-tab" data-bs-toggle="tab" data-bs-target="#toysForTots" type="button" role="tab" aria-controls="toysForTots" aria-selected="false"><strong>Toys For Tots December 2008</strong></button>
 							  </li>
 						</ul>
-						<div className="tab-content philanthropyTabContent">
+						<div className="tab-content">
 							<div className="tab-pane fade show active" id="americanHeartApril2009" role="tabpanel" aria-labelledby="americanHeartApril2009-tab">
 								<div className='row'>
 									{renderedPhilanthropyAmericanHeartApril2009Images}

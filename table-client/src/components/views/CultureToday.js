@@ -43,7 +43,7 @@ function CultureTwoThousands()
 		}
 	}
 
-		var renderedGeneralOutput = generalImages.map(item => <div onClick={toggleModal} className="col-md-2"><div className="imgPane"><img loading="lazy" src={item} data-src={item} alt=''/></div></div>);
+		var renderedGeneralOutput = generalImages.map(item => <div onTouch={toggleModal} className="col-md-2"><div className="imgPane"><img loading="lazy" src={item} data-src={item} alt=''/></div></div>);
 
 		return (
 			<div>
@@ -98,7 +98,7 @@ function CultureTwoThousands()
 				<div className={className}>
 					<div className='modalBackground'>
 						<div className="modalContent">
-							<button onClick={() => toggleModal() }  type="button" className="closeModalButton">X</button>
+							<button onTouch={() => toggleModal() }  type="button" className="closeModalButton">X</button>
 								<div className='modalBody' dangerouslySetInnerHTML={{__html: modalContent}}>
 								</div>
 						</div>

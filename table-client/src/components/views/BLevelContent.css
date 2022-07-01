@@ -13,7 +13,6 @@
 	width: 3450px;
 	border-bottom: 15px solid #ED1B2E;
 	background-color: #292929;
-	z-index: 1;
 }
 .nav-pills .nav-link 
 {
@@ -31,6 +30,10 @@
 	background-color: #ED1B2E !important;
 	color: #292929 !important;
 }
+.nav-link:hover, .nav-link:focus
+{
+	color: #fff !important;
+}
 .row
 {
 	height: 400px;
@@ -45,12 +48,15 @@
 }
 .caciTimesTabContent
 {
-	margin-top: 115px;
+	position: absolute;
+	top: 230px !important;
+	height: 1125px !important;
 }
-.employeeRecognitionTabContent,
-.philanthropyTabContent
+.secondNav ~ .tab-content
 {
-	margin-top: 315px;
+	position: absolute;
+	top: 430px;
+	height: 925px;
 }
 .col-md-2
 {
@@ -79,27 +85,6 @@
 {
 	transition: opacity .35s linear !important;
 }
-.hideDocumentButtons
-{
-	position: absolute;
-	background-color: #38383d;
-}
-.hideDocumentButtons:nth-of-type(1)
-{
-	width: 90px;
-	height: 30px;
-	top: 96px;
-	left: 427px;
-	z-index: 3;
-}
-.hideDocumentButtons:nth-of-type(2)
-{
-	width: 120px;
-	height: 30px;
-	top: 96px;
-	left: 2117px;
-	z-index: 3;
-}
 .videoPlaylistContainer
 {
 	position: absolute;
@@ -108,6 +93,7 @@
 	height: 1660px;
 	width: 950px;
 	overflow-y: scroll;
+	overflow-x: hidden;
 
 }
 .largeVideoThumbnailContainer
@@ -117,16 +103,15 @@
 	top: 450px;
 	width: 2400px;
 	height: 1350px;
-	border: solid #ED1B2E 20px;
 }
 .largeVideoThumbnailContainer button
 {
-	width: 800px;
-	height: 800px;
+	width: 500px;
+	height: 500px;
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	background-color: rgba(64, 64, 64, 0.5);
+	background-color: rgba(211, 211, 211, 0.8);
 	outline: none;
 	border: 0;
 	border-radius: 500px;
@@ -136,7 +121,7 @@
 }
 .largeVideoThumbnailContainer button.play:before
 {
-	content: 'PLAY';
+	content: url('../../images/playButton.png');
 }
 .largeVideoThumbnailContainer button.pause:before
 {
@@ -149,13 +134,23 @@
 	left: 1242px;
 	height: 250px;
 	width: 2400px;
-	border: solid #ED1B2E 20px;
+	overflow: hidden;
+}
+.videoTitleArea h1
+{
+	color: #fff;
+	font-size: 6em;
 }
 .videoThumbnailInfoContainer
 {
 	position: relative;
 	height: 300px;
 	width: 100%;
+	border-bottom: solid #ED1B2E 8px;
+}
+.videoThumbnailInfoContainer:last-child
+{
+	border-bottom: 0;
 }
 .videoThumbnailContainer
 {
@@ -185,4 +180,51 @@
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+}
+.videoLoadingDiv
+{
+	position: absolute;
+	top: 450px;
+	left: 200px;
+	width: 3440px;
+	height: 1660px;
+	background-color: rgba(0, 0, 0, 0.8);
+	z-index: 3;
+}
+.videoLoadingDiv h1
+{
+	color: #fff;
+	font-size: 8em;
+	top: 33%;
+}
+.videoLoadingDiv > *
+{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.nowPlayingOverlay
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(211, 211, 211, 0.8);
+	display: none;
+	z-index: 2;
+}
+.nowPlayingOverlay h1
+{
+	color: #fff;
+	font-size: 64px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.nowPlayingOverlay.active
+{
+	display: block !important;
 }

@@ -67,7 +67,7 @@ export default function TwoThousand()
 	}
 
 	return (
-			<div className = {className} onClick={() => resetTimeout()}>
+			<div className = {className} onTouchStart={() => resetTimeout()}>
 				<div className='tableLeft'>
 					<h1 className='backgroundTextTop'>2010-NOW</h1>
 					<div className='videoPlaylistContainer'>
@@ -90,10 +90,10 @@ export default function TwoThousand()
 						</div>
 					</div>
 					<div className='hcgtButtonsContainer'>
-						<button className='HCGTButton' onClick={() => navigateAttract()}></button>
-						<button className='HCGTButton' onClick={() => {setIsVisibleCulture(true); setIsVisibleTechnology(false); setIsVisibleGrowth(false);}}></button>
-						<button className='HCGTButton' onClick={() => {setIsVisibleCulture(false); setIsVisibleTechnology(true); setIsVisibleGrowth(false);}}></button>
-						<button className='HCGTButton' onClick={() => {setIsVisibleCulture(false); setIsVisibleTechnology(false); setIsVisibleGrowth(true);}}></button>
+						<button className='HCGTButton' onTouchStart={() => navigateAttract()}></button>
+						<button className='HCGTButton' onTouchStart={() => {setIsVisibleCulture(true); setIsVisibleTechnology(false); setIsVisibleGrowth(false);}}></button>
+						<button className='HCGTButton' onTouchStart={() => {setIsVisibleCulture(false); setIsVisibleTechnology(true); setIsVisibleGrowth(false);}}></button>
+						<button className='HCGTButton' onTouchStart={() => {setIsVisibleCulture(false); setIsVisibleTechnology(false); setIsVisibleGrowth(true);}}></button>
 					</div>
 					<h1 className='backgroundTextBottom'>2010-NOW</h1>
 				</div>
