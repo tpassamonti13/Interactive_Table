@@ -34,6 +34,7 @@ export default function Attract()
 				navigate('/today');
 			}, 5000);
 		}
+  
 	}
 
 	return (

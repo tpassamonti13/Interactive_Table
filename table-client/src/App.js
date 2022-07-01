@@ -8,38 +8,14 @@ import backgroundVideo from './videos/Halftone_Hero_03_TABLE.mp4';
 import './App.css';
 import './fonts/EncodeSans-VariableFont_wdth,wght.ttf';
 
-const table_api = process.env.TABLE_API || 'localhost:3456';
-//const socket = window.io(table_api);
+const table_api = process.env.TABLE_API || '192.168.0.31:3456';
+const socket = window.io(table_api);
 
 class App extends Component{
 
-  // initialize the video handlers
-  //Video.init();
-  //  const socket = io('localhost:3456');
-  //  StartVideo();
-  
   App(){
-    //this.socket = window.io('localhost:3456');
+
   }
-
-  // load socket.io resource
-  /*componentDidMount() {
-    const ioscript = document.createElement("script");
-    ioscript.src = "http://localhost:3456/socket.io/socket.io.js";
-    ioscript.async = true;
-    ioscript.onload = () => this.ioLoaded();
-
-    document.body.appendChild(ioscript);
-    console.log("loading socket.io script");
-  }
-
-  ioLoaded(){
-    console.log("socket.io script loaded");
-
-    this.socket = window.io('localhost:3456');
-
-    this.socket.emit('start video', 1234);
-  }*/
 
   render() {
 
@@ -63,4 +39,4 @@ class App extends Component{
   }
 }
 export default App;
-//export { socket };
+export { socket };
