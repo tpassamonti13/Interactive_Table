@@ -11,36 +11,57 @@ function StartVideo(video_id)
   socket.emit('start video', video_id);
   console.log('playing video: ', video_id);
   videoPlaying = true;
+  started();
 }
 
 function PauseVideo() 
 {
-  socket.emit('pause video', "");
+  socket.broadcast.emit('pause video', "");
   videoPlaying = false;
   stopped();
 }
 
 function ResumeVideo() 
 {
-  socket.emit('resume video', "");
+  socket.broadcast.emit('resume video', "");
   videoPlaying = true;
-  stopped();
+  started();
+}
+
+function SeekVideo(time)
+{
+  socket.broadcast.emit('seek', time);
 }
 
 function InitVideo()
 {
 	console.log('video initialized');
-  socket.on('stop', () => 
+  socket.on('video ended', () => 
   {
     timeout = setTimeout(() => 
     {
       socket.broadcast.emit('reset video');
-      navigate('/');
+      setTimeout(() =>
+      {
+        navigate('/');
+      }, 5000);
     }, 30000);
   });
 }
 
 function stopped()
+{
+  timeout = setTimeout(() =>
+  {
+    socket.broadcast.emit('reset video');
+    setTimeout(() =>
+    {
+      navigate('/');
+    }, 5000);
+  }, 30000);
+}
+
+function started()
 {
   clearTimeout(timeout);
 }
