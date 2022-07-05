@@ -22,12 +22,12 @@
 .modalContent
 {
 	width: 3200px;
-	height: 1400px;
+	height: 1600px;
 	background-color: #000;
 	border: 20px #ED1B2E solid;
 	position: absolute;
 	left: 50%;
-	top: 50%;
+	top: 41.5%;
 	transform: translate(-50%, -50%);
 }
 .modalBody
@@ -38,7 +38,7 @@
 }
 .modalBody img
 {
-	height: 90%;
+	height: 85%;
 }
 .modalBody > *
 {

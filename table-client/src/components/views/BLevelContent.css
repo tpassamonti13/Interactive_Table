@@ -16,14 +16,17 @@
 }
 .nav-pills .nav-link 
 {
-	background-color: #3A3B3C;
+	background-color: #3A3B3C !important;
 	height: 100px;
 	color: #fff;
 	border-radius: 0;
-	border-left: 2.5px solid #292929;
-	border-right: 2.5px solid #292929;
 	line-height: 100px;
 	font-size: 48px;
+}
+.nav-item
+{
+	border-left: 5px solid #292929 !important;
+	border-right: 5px solid #292929 !important;
 }
 .nav-pills .nav-link.active
 {
@@ -42,7 +45,7 @@
 {
 	margin-top: 0px;
 	width: 3450px;
-	height: 1210px;
+	height: 1240px;
 	overflow-y: scroll;
 	overflow-x: hidden;
 }
@@ -85,6 +88,27 @@
 {
 	transition: opacity .35s linear !important;
 }
+.hideDocumentButtons
+ {
+ 	position: absolute;
+ 	background-color: #38383d;
+ }
+ .hideDocumentButtons:nth-of-type(1)
+ {
+ 	width: 90px;
+ 	height: 30px;
+ 	top: 195px;
+ 	left: 725px;
+ 	z-index: 3;
+ }
+ .hideDocumentButtons:nth-of-type(2)
+ {
+ 	width: 120px;
+ 	height: 30px;
+ 	top: 195px;
+ 	left: 2420px;
+ 	z-index: 3;
+ }
 .videoPlaylistContainer
 {
 	position: absolute;
@@ -125,7 +149,7 @@
 }
 .largeVideoThumbnailContainer button.pause:before
 {
-	content: 'PAUSE';
+	content: url('../../images/pauseButton.png');
 }
 .videoTitleArea
 {
@@ -135,11 +159,17 @@
 	height: 250px;
 	width: 2400px;
 	overflow: hidden;
+	text-align: center;
 }
 .videoTitleArea h1
 {
 	color: #fff;
 	font-size: 6em;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
 }
 .videoThumbnailInfoContainer
 {
@@ -211,7 +241,7 @@
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background-color: rgba(211, 211, 211, 0.8);
+	background-color: rgba(0, 0, 0, 0.8);
 	display: none;
 	z-index: 2;
 }
@@ -227,4 +257,36 @@
 .nowPlayingOverlay.active
 {
 	display: block !important;
+}
+.cultureTodayTabContent
+{
+	height: 1135px !important;
+}
+.technologyTodayTabContent
+{
+	height: 1035px !important;
+}
+.videoThumbnailPlayOverlay
+{
+	background-color: rgba(0, 0, 0, 0.5);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.videoThumbnailPlayOverlay button
+{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 100px;
+	height: 100px;
+	border-radius: 100px;
+	background-color: rgba(211, 211, 211, 0.8);
+}
+.videoThumbnailPlayOverlay button:before
+{
+	content: url('../../images/playButtonSmall.png');
 }

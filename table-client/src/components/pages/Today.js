@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import CultureToday from '../views/CultureToday'
-import TechnologyTwoThousands from '../views/TechnologyTwoThousands.js'
-import GrowthTwoThousands from '../views/GrowthTwoThousands.js'
+import TechnologyToday from '../views/TechnologyToday'
+import GrowthToday from '../views/GrowthToday'
+import VideoTwoThousands from '../views/VideoTwoThousands';
 import '../../App.css';
 import './Pages.css';
 import '../HCGTButton.css'
@@ -16,11 +17,15 @@ export default function TwoThousand()
 	const [isVisibleTechnology, setIsVisibleTechnology] = useState(false);
 	const [isVisibleGrowth, setIsVisibleGrowth] = useState(false);
 
-	const className = (isVisible ? "fadeIn" : "fadeOut");
-
 	const [timer, setTimer] = useState(0);
+
+	const className1 = (isVisible ? "fadeIn" : "fadeOut");
+	const className2 = (isVisibleCulture ? "categoryFadeIn" : "categoryFadeOut");
+	const className3 = (isVisibleTechnology ? "categoryFadeIn" : "categoryFadeOut");
+	const className4 = (isVisibleGrowth ? "categoryFadeIn" : "categoryFadeOut");
 	
 	//Sets a timeout for the kiosk. Returns to the Attract screen if the kiosk is timedout
+	/*
 	useEffect(() => 
 	{
 		setTimer(timer => setTimeout(() => 
@@ -54,8 +59,7 @@ export default function TwoThousand()
 
 	  		return () => clearTimeout(timer);
 	}
-
-
+	*/
 	function navigateAttract()
 	{
 		setIsVisible(false);
@@ -67,33 +71,28 @@ export default function TwoThousand()
 	}
 
 	return (
-			<div className = {className} onTouchStart={() => resetTimeout()}>
+			<div className = {className1}>
 				<div className='tableLeft'>
 					<h1 className='backgroundTextTop'>2010-NOW</h1>
-					<div className='videoPlaylistContainer'>
-					</div>
-					<div className='largeVideoThumbnailContainer'>
-					</div>
-					<div className='videoTitleArea'>
-					</div>
+					<VideoTwoThousands />
 				</div>
 				<div className='tableRight'>
 					<div className='bLevelContentArea'>
-						<div style={{ display: isVisibleCulture ? "block" : "none" }}>
+						<div className={className2}>
 							<CultureToday />
 						</div>
-						<div style={{ display: isVisibleTechnology ? "block" : "none" }}>
-							<TechnologyTwoThousands />
+						<div className={className3}>
+							<TechnologyToday />
 						</div>
-						<div style={{ display: isVisibleGrowth ? "block" : "none" }}>
-							<GrowthTwoThousands />
+						<div className={className4}>
+							<GrowthToday />
 						</div>
 					</div>
 					<div className='hcgtButtonsContainer'>
-						<button className='HCGTButton' onTouchStart={() => navigateAttract()}></button>
-						<button className='HCGTButton' onTouchStart={() => {setIsVisibleCulture(true); setIsVisibleTechnology(false); setIsVisibleGrowth(false);}}></button>
-						<button className='HCGTButton' onTouchStart={() => {setIsVisibleCulture(false); setIsVisibleTechnology(true); setIsVisibleGrowth(false);}}></button>
-						<button className='HCGTButton' onTouchStart={() => {setIsVisibleCulture(false); setIsVisibleTechnology(false); setIsVisibleGrowth(true);}}></button>
+						<button className='HCGTButton' onTouchEnd={() => navigateAttract()}></button>
+						<button className='HCGTButton' onTouchEnd={() => {setIsVisibleCulture(true); setIsVisibleTechnology(false); setIsVisibleGrowth(false);}}></button>
+						<button className='HCGTButton' onTouchEnd={() => {setIsVisibleCulture(false); setIsVisibleTechnology(true); setIsVisibleGrowth(false);}}></button>
+						<button className='HCGTButton' onTouchEnd={() => {setIsVisibleCulture(false); setIsVisibleTechnology(false); setIsVisibleGrowth(true);}}></button>
 					</div>
 					<h1 className='backgroundTextBottom'>2010-NOW</h1>
 				</div>

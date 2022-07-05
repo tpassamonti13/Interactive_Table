@@ -58,7 +58,7 @@ function CultureTwoThousands()
 
 			if (e.currentTarget.classList.contains('document'))
 			{
-				setModalContent('<embed type="application/pdf" width="1800" height="1000" src=' + e.target.getAttribute('data-src') + '?toolbar=0></embed>');
+				setModalContent('<div class="hideDocumentButtons"></div><div class="hideDocumentButtons"></div><embed type="application/pdf" width="1800" height="1000" src=' + e.target.getAttribute('data-src') + '?toolbar=0></embed>');
 			}
 			else
 			{
@@ -71,46 +71,46 @@ function CultureTwoThousands()
 		}
 	}
 
-		var renderedGeneralOutput = generalImages.map(item => <div onClick={toggleModal} className="col-md-2"><div className="imgPane"><img loading="lazy" src={item} data-src={item} alt=''/></div></div>);
+		var renderedGeneralOutput = generalImages.map(item => <div onTouchEnd={toggleModal} className="col-md-2"><div className="imgPane"><img loading="lazy" src={item} data-src={item} alt=''/></div></div>);
 
-		renderedGeneralOutput[2] = <div onClick={toggleModal} className="col-md-2 document"><div className="imgPane"><img loading="lazy" src={generalImages[2]} data-src={generalDocuments[0]} alt=''/></div></div>;
+		renderedGeneralOutput[2] = <div onTouchEnd={toggleModal} className="col-md-2 document"><div className="imgPane"><img loading="lazy" src={generalImages[2]} data-src={generalDocuments[0]} alt=''/></div></div>;
 
-		var renderedCACITimesCompleteIssuesOutput = caciTimesCompleteIssuesImages.map((item, index) => <div onClick={toggleModal} className="col-md-2 document"><div className="imgPane"><img loading="lazy" src={item} data-src={caciTimesCompleteIssuesDocuments[index]} alt=''/></div></div>);
-		var renderedCACITimesCultureStoriesOutput = caciTimesCultureStoriesImages.map(item => <div onClick={toggleModal} className="col-md-2"><div className="imgPane"><img loading="lazy" src={item} data-src={item} alt=''/></div></div>);
+		var renderedCACITimesCompleteIssuesOutput = caciTimesCompleteIssuesImages.map((item, index) => <div onTouchEnd={toggleModal} className="col-md-2 document"><div className="imgPane"><img loading="lazy" src={item} data-src={caciTimesCompleteIssuesDocuments[index]} alt=''/></div></div>);
+		var renderedCACITimesCultureStoriesOutput = caciTimesCultureStoriesImages.map(item => <div onTouchEnd={toggleModal} className="col-md-2"><div className="imgPane"><img loading="lazy" src={item} data-src={item} alt=''/></div></div>);
 
-		var renderedEmployeeRecognitionAdmiralMoorerAwards2005 = employeeRecognitionAdmiralMoorerAwards2005Images.map(item => <div onClick={toggleModal} className="col-md-2"><div className="imgPane"><img loading="lazy" src={item} data-src={item} alt=''/></div></div>);
-		var renderedEmployeeRecognitionAdmiralMoorerAwards2009 = employeeRecognitionAdmiralMoorerAwards2009Images.map(item => <div onClick={toggleModal} className="col-md-2"><div className="imgPane"><img loading="lazy" src={item} data-src={item} alt=''/></div></div>);
-		var renderedEmployeeRecognitionAwardsCeremonyJune2008 = employeeRecognitionAwardsCeremonyJune2008Images.map(item => <div onClick={toggleModal} className="col-md-2"><div className="imgPane"><img loading="lazy" src={item} data-src={item} alt=''/></div></div>);
-		var renderedEmployeeRecognitionAwardsCeremonyOct2009 = employeeRecognitionAwardsCeremonyOct2009Images.map(item => <div onClick={toggleModal} className="col-md-2"><div className="imgPane"><img loading="lazy" src={item} data-src={item} alt=''/></div></div>);
-		var renderedEmployeeRecognitionAwardsProgramFeb2009 = employeeRecognitionAwardsProgramFeb2009Images.map(item => <div onClick={toggleModal} className="col-md-2"><div className="imgPane"><img loading="lazy" src={item} data-src={item} alt=''/></div></div>);
-		var renderedEmployeeRecognitionCelebrationofDistinction2003 = employeeRecognitionCelebrationofDistinction2003Images.map(item => <div onClick={toggleModal} className="col-md-2"><div className="imgPane"><img loading="lazy" src={item} data-src={item} alt=''/></div></div>);
-		var renderedEmployeeRecognitionCelebrationofDistinction2005 = employeeRecognitionCelebrationofDistinction2005Images.map(item => <div onClick={toggleModal} className="col-md-2"><div className="imgPane"><img loading="lazy" src={item} data-src={item} alt=''/></div></div>);
+		var renderedEmployeeRecognitionAdmiralMoorerAwards2005 = employeeRecognitionAdmiralMoorerAwards2005Images.map(item => <div onTouchEnd={toggleModal} className="col-md-2"><div className="imgPane"><img loading="lazy" src={item} data-src={item} alt=''/></div></div>);
+		var renderedEmployeeRecognitionAdmiralMoorerAwards2009 = employeeRecognitionAdmiralMoorerAwards2009Images.map(item => <div onTouchEnd={toggleModal} className="col-md-2"><div className="imgPane"><img loading="lazy" src={item} data-src={item} alt=''/></div></div>);
+		var renderedEmployeeRecognitionAwardsCeremonyJune2008 = employeeRecognitionAwardsCeremonyJune2008Images.map(item => <div onTouchEnd={toggleModal} className="col-md-2"><div className="imgPane"><img loading="lazy" src={item} data-src={item} alt=''/></div></div>);
+		var renderedEmployeeRecognitionAwardsCeremonyOct2009 = employeeRecognitionAwardsCeremonyOct2009Images.map(item => <div onTouchEnd={toggleModal} className="col-md-2"><div className="imgPane"><img loading="lazy" src={item} data-src={item} alt=''/></div></div>);
+		var renderedEmployeeRecognitionAwardsProgramFeb2009 = employeeRecognitionAwardsProgramFeb2009Images.map(item => <div onTouchEnd={toggleModal} className="col-md-2"><div className="imgPane"><img loading="lazy" src={item} data-src={item} alt=''/></div></div>);
+		var renderedEmployeeRecognitionCelebrationofDistinction2003 = employeeRecognitionCelebrationofDistinction2003Images.map(item => <div onTouchEnd={toggleModal} className="col-md-2"><div className="imgPane"><img loading="lazy" src={item} data-src={item} alt=''/></div></div>);
+		var renderedEmployeeRecognitionCelebrationofDistinction2005 = employeeRecognitionCelebrationofDistinction2005Images.map(item => <div onTouchEnd={toggleModal} className="col-md-2"><div className="imgPane"><img loading="lazy" src={item} data-src={item} alt=''/></div></div>);
 
-		renderedEmployeeRecognitionCelebrationofDistinction2005[46] = <div onClick={toggleModal} className="col-md-2 document"><div className="imgPane"><img loading="lazy" src={employeeRecognitionCelebrationofDistinction2005Images[46]} data-src={employeeRecognitionCelebrationofDistinction2005Documents[0]} alt=''/></div></div>;
+		renderedEmployeeRecognitionCelebrationofDistinction2005[46] = <div onTouchEnd={toggleModal} className="col-md-2 document"><div className="imgPane"><img loading="lazy" src={employeeRecognitionCelebrationofDistinction2005Images[46]} data-src={employeeRecognitionCelebrationofDistinction2005Documents[0]} alt=''/></div></div>;
 
-		var renderedEmployeeRecognitionCelebrationofDistinction2006 = employeeRecognitionCelebrationofDistinction2006Images.map(item => <div onClick={toggleModal} className="col-md-2"><div className="imgPane"><img loading="lazy" src={item} data-src={item} alt=''/></div></div>);
-		var renderedEmployeeRecognitionCelebrationofDistinction2007 = employeeRecognitionCelebrationofDistinction2007Images.map(item => <div onClick={toggleModal} className="col-md-2"><div className="imgPane"><img loading="lazy" src={item} data-src={item} alt=''/></div></div>);
-		var renderedEmployeeRecognitionCelebrationofDistinction2008 = employeeRecognitionCelebrationofDistinction2008Images.map(item => <div onClick={toggleModal} className="col-md-2"><div className="imgPane"><img loading="lazy" src={item} data-src={item} alt=''/></div></div>);
+		var renderedEmployeeRecognitionCelebrationofDistinction2006 = employeeRecognitionCelebrationofDistinction2006Images.map(item => <div onTouchEnd={toggleModal} className="col-md-2"><div className="imgPane"><img loading="lazy" src={item} data-src={item} alt=''/></div></div>);
+		var renderedEmployeeRecognitionCelebrationofDistinction2007 = employeeRecognitionCelebrationofDistinction2007Images.map(item => <div onTouchEnd={toggleModal} className="col-md-2"><div className="imgPane"><img loading="lazy" src={item} data-src={item} alt=''/></div></div>);
+		var renderedEmployeeRecognitionCelebrationofDistinction2008 = employeeRecognitionCelebrationofDistinction2008Images.map(item => <div onTouchEnd={toggleModal} className="col-md-2"><div className="imgPane"><img loading="lazy" src={item} data-src={item} alt=''/></div></div>);
 
-		var renderedMediaCoverage = mediaCoverageImages.map(item => <div onClick={toggleModal} className="col-md-2"><div className="imgPane"><img loading="lazy" src={item} data-src={item} alt=''/></div></div>);
+		var renderedMediaCoverage = mediaCoverageImages.map(item => <div onTouchEnd={toggleModal} className="col-md-2"><div className="imgPane"><img loading="lazy" src={item} data-src={item} alt=''/></div></div>);
 
-		var renderedPhilanthropyAmericanHeartApril2009Images = philanthropyAmericanHeartApril2009Images.map(item => <div onClick={toggleModal} className="col-md-2"><div className="imgPane"><img loading="lazy" src={item} data-src={item} alt=''/></div></div>);
-		var renderedPhilanthropyAmericanHeartJuly2009Images = philanthropyAmericanHeartJuly2009Images.map(item => <div onClick={toggleModal} className="col-md-2"><div className="imgPane"><img loading="lazy" src={item} data-src={item} alt=''/></div></div>);
-		var renderedPhilanthropyAmericanHeartWalkImages = philanthropyAmericanHeartWalkImages.map(item => <div onClick={toggleModal} className="col-md-2"><div className="imgPane"><img loading="lazy" src={item} data-src={item} alt=''/></div></div>);
-		var renderedPhilanthropyAngelTreeImages = philanthropyAngelTreeImages.map(item => <div onClick={toggleModal} className="col-md-2"><div className="imgPane"><img loading="lazy" src={item} data-src={item} alt=''/></div></div>);
-		var renderedPhilanthropyUSOCarePackageMay2009Images = philanthropyUSOCarePackageMay2009Images.map(item => <div onClick={toggleModal} className="col-md-2"><div className="imgPane"><img loading="lazy" src={item} data-src={item} alt=''/></div></div>);
-		var renderedPhilanthropyUSOOperationMay2009Images = philanthropyUSOOperationMay2009Images.map(item => <div onClick={toggleModal} className="col-md-2"><div className="imgPane"><img loading="lazy" src={item} data-src={item} alt=''/></div></div>);
-		var renderedPhilanthropyJuniorBowlImages = philanthropyJuniorBowlImages.map(item => <div onClick={toggleModal} className="col-md-2"><div className="imgPane"><img loading="lazy" src={item} data-src={item} alt=''/></div></div>);
-		var renderedPhilanthropyToysForTotsImages = philanthropyToysForTotsImages.map(item => <div onClick={toggleModal} className="col-md-2"><div className="imgPane"><img loading="lazy" src={item} data-src={item} alt=''/></div></div>);
+		var renderedPhilanthropyAmericanHeartApril2009Images = philanthropyAmericanHeartApril2009Images.map(item => <div onTouchEnd={toggleModal} className="col-md-2"><div className="imgPane"><img loading="lazy" src={item} data-src={item} alt=''/></div></div>);
+		var renderedPhilanthropyAmericanHeartJuly2009Images = philanthropyAmericanHeartJuly2009Images.map(item => <div onTouchEnd={toggleModal} className="col-md-2"><div className="imgPane"><img loading="lazy" src={item} data-src={item} alt=''/></div></div>);
+		var renderedPhilanthropyAmericanHeartWalkImages = philanthropyAmericanHeartWalkImages.map(item => <div onTouchEnd={toggleModal} className="col-md-2"><div className="imgPane"><img loading="lazy" src={item} data-src={item} alt=''/></div></div>);
+		var renderedPhilanthropyAngelTreeImages = philanthropyAngelTreeImages.map(item => <div onTouchEnd={toggleModal} className="col-md-2"><div className="imgPane"><img loading="lazy" src={item} data-src={item} alt=''/></div></div>);
+		var renderedPhilanthropyUSOCarePackageMay2009Images = philanthropyUSOCarePackageMay2009Images.map(item => <div onTouchEnd={toggleModal} className="col-md-2"><div className="imgPane"><img loading="lazy" src={item} data-src={item} alt=''/></div></div>);
+		var renderedPhilanthropyUSOOperationMay2009Images = philanthropyUSOOperationMay2009Images.map(item => <div onTouchEnd={toggleModal} className="col-md-2"><div className="imgPane"><img loading="lazy" src={item} data-src={item} alt=''/></div></div>);
+		var renderedPhilanthropyJuniorBowlImages = philanthropyJuniorBowlImages.map(item => <div onTouchEnd={toggleModal} className="col-md-2"><div className="imgPane"><img loading="lazy" src={item} data-src={item} alt=''/></div></div>);
+		var renderedPhilanthropyToysForTotsImages = philanthropyToysForTotsImages.map(item => <div onTouchEnd={toggleModal} className="col-md-2"><div className="imgPane"><img loading="lazy" src={item} data-src={item} alt=''/></div></div>);
 
 		return (
 			<div>
 				<ul className="nav nav-pills nav-fill" role="tablist">
 				  <li className="nav-item" role="presentation">
-					<button className="nav-link active" id="general-tab" data-bs-toggle="tab" data-bs-target="#generalCulture" type="button" role="tab" aria-controls="generalCulture" aria-selected="true"><strong>General</strong></button>
+					<button className="nav-link active" id="caciTimes-tab" data-bs-toggle="tab" data-bs-target="#caciTimes" type="button" role="tab" aria-controls="caciTimes" aria-selected="false"><strong>CACI Times</strong></button>
 				  </li>
 				  <li className="nav-item" role="presentation">
-					<button className="nav-link" id="caciTimes-tab" data-bs-toggle="tab" data-bs-target="#caciTimes" type="button" role="tab" aria-controls="caciTimes" aria-selected="false"><strong>CACI Times</strong></button>
+					<button className="nav-link" id="general-tab" data-bs-toggle="tab" data-bs-target="#generalCulture" type="button" role="tab" aria-controls="generalCulture" aria-selected="true"><strong>General</strong></button>
 				  </li>
 				  <li className="nav-item" role="presentation">
 					<button className="nav-link" id="employeeRecognition-tab" data-bs-toggle="tab" data-bs-target="#employeeRecognition" type="button" role="tab" aria-controls="employeeRecognition" aria-selected="false"><strong>Employee Recognition Ceremony Images</strong></button>
@@ -124,12 +124,12 @@ function CultureTwoThousands()
 				</ul>
 
 				<div className="tab-content">
-					<div className="tab-pane fade show active" id="generalCulture" role="tabpanel" aria-labelledby="generalCulture-tab">
+					<div className="tab-pane fade" id="generalCulture" role="tabpanel" aria-labelledby="generalCulture-tab">
 						<div className='row'>
 							{renderedGeneralOutput}
 						</div>
 					</div>
-					<div className="tab-pane fade" id="caciTimes" role="tabpanel" aria-labelledby="caciTimes-tab">
+					<div className="tab-pane fade show active" id="caciTimes" role="tabpanel" aria-labelledby="caciTimes-tab">
 						<ul className="nav nav-pills nav-fill secondNav" role="tablist">
 							  <li className="nav-item" role="presentation">
 								<button className="nav-link active" id="completeIssues-tab" data-bs-toggle="tab" data-bs-target="#completeIssues" type="button" role="tab" aria-controls="completeIssues" aria-selected="true"><strong>Complete Issues</strong></button>
@@ -324,7 +324,7 @@ function CultureTwoThousands()
 				<div className={className}>
 					<div className='modalBackground'>
 						<div className="modalContent">
-							<button onClick={() => toggleModal() }  type="button" className="closeModalButton">X</button>
+							<button onTouchEnd={() => toggleModal() }  type="button" className="closeModalButton">X</button>
 								<div className='modalBody' dangerouslySetInnerHTML={{__html: modalContent}}>
 								</div>
 						</div>

@@ -54,25 +54,25 @@ function GrowthTwoThousands()
 		}
 	}
 
-		var renderedGeneralOutput = generalImages.map(item => <div onTouchStart={toggleModal} className="col-md-2"><div className="imgPane"><img alt="" loading="lazy" src={item} data-src={item}/></div></div>);
+		var renderedGeneralOutput = generalImages.map(item => <div onTouchEnd={toggleModal} className="col-md-2"><div className="imgPane"><img alt="" loading="lazy" src={item} data-src={item}/></div></div>);
 
-		var annualReportOutput = annualReportImages.map((item, index) => <div onTouchStart={toggleModal} className="col-md-2 document"><div className="imgPane"><img loading="lazy" src={item} data-src={annualReportDocuments[index]} alt=''/></div></div>);
+		var annualReportOutput = annualReportImages.map((item, index) => <div onTouchEnd={toggleModal} className="col-md-2 document"><div className="imgPane"><img loading="lazy" src={item} data-src={annualReportDocuments[index]} alt=''/></div></div>);
 
-		var asymmOutput = asymmImages.map((item, index) => <div onTouchStart={toggleModal} className="col-md-2 document"><div className="imgPane"><img alt="" loading="lazy" src={item} data-src={asymmDocuments[index]} /></div></div>);
+		var asymmOutput = asymmImages.map((item, index) => <div onTouchEnd={toggleModal} className="col-md-2 document"><div className="imgPane"><img alt="" loading="lazy" src={item} data-src={asymmDocuments[index]} /></div></div>);
 
-		var mediaCoverageOutput = mediaCoverageImages.map(item => <div onTouchStart={toggleModal} className="col-md-2"><div className="imgPane"><img alt="" loading="lazy" src={item} data-src={item}/></div></div>);
+		var mediaCoverageOutput = mediaCoverageImages.map(item => <div onTouchEnd={toggleModal} className="col-md-2"><div className="imgPane"><img alt="" loading="lazy" src={item} data-src={item}/></div></div>);
 
 		return (
 			<div>
 				<ul className="nav nav-pills nav-fill" role="tablist">
 				  <li className="nav-item" role="presentation">
-					<button className="nav-link active" id="general-tab" data-bs-toggle="tab" data-bs-target="#generalGrowth" type="button" role="tab" aria-controls="generalGrowth" aria-selected="true"><strong>General</strong></button>
-				  </li>
-				  <li className="nav-item" role="presentation">
-					<button className="nav-link" id="annualReports-tab" data-bs-toggle="tab" data-bs-target="#annualReports" type="button" role="tab" aria-controls="annualReports" aria-selected="false"><strong>Annual Reports</strong></button>
+					<button className="nav-link active" id="annualReports-tab" data-bs-toggle="tab" data-bs-target="#annualReports" type="button" role="tab" aria-controls="annualReports" aria-selected="false"><strong>Annual Reports</strong></button>
 				  </li>
 				  <li className="nav-item" role="presentation">
 					<button className="nav-link" id="asymm-tab" data-bs-toggle="tab" data-bs-target="#asymm" type="button" role="tab" aria-controls="asymm" aria-selected="false"><strong>Asymmetric Threat Symposium</strong></button>
+				  </li>
+				  <li className="nav-item" role="presentation">
+					<button className="nav-link" id="general-tab" data-bs-toggle="tab" data-bs-target="#generalGrowth" type="button" role="tab" aria-controls="generalGrowth" aria-selected="true"><strong>General</strong></button>
 				  </li>
 				  <li className="nav-item" role="presentation">
 					<button className="nav-link" id="mediaCoverage-tab" data-bs-toggle="tab" data-bs-target="#mediaCoverage" type="button" role="tab" aria-controls="mediaCoverage" aria-selected="false"><strong>Media Coverage</strong></button>
@@ -80,12 +80,12 @@ function GrowthTwoThousands()
 				</ul>
 
 				<div className="tab-content">
-					<div className="tab-pane fade show active" id="generalGrowth" role="tabpanel" aria-labelledby="generalGrowth-tab">
+					<div className="tab-pane fade" id="generalGrowth" role="tabpanel" aria-labelledby="generalGrowth-tab">
 						<div className='row'>
 							{renderedGeneralOutput}
 						</div>
 					</div>
-					<div className="tab-pane fade" id="annualReports" role="tabpanel" aria-labelledby="annualReports-tab">
+					<div className="tab-pane fade show active" id="annualReports" role="tabpanel" aria-labelledby="annualReports-tab">
 						<div className='row'>
 							{annualReportOutput}
 						</div>
@@ -104,7 +104,7 @@ function GrowthTwoThousands()
 				<div className={className}>
 					<div className='modalBackground'>
 						<div className="modalContent">
-							<button onTouchStart={() => toggleModal() }  type="button" className="closeModalButton">X</button>
+							<button onTouchEnd={() => toggleModal() }  type="button" className="closeModalButton">X</button>
 								<div className='modalBody' dangerouslySetInnerHTML={{__html: modalContent}}>
 								</div>
 						</div>

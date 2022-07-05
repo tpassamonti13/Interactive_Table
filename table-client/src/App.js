@@ -9,7 +9,7 @@ import './App.css';
 import './fonts/EncodeSans-VariableFont_wdth,wght.ttf';
 
 const table_api = process.env.TABLE_API || '192.168.0.31:3456';
-const socket = window.io(table_api);
+//const socket = window.io(table_api);
 
 class App extends Component{
 
@@ -39,4 +39,4 @@ class App extends Component{
   }
 }
 export default App;
-export { socket };
+//export { socket };

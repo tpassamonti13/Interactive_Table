@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import CultureTwoThousands from '../views/CultureTwoThousands.js'
-import TechnologyTwoThousands from '../views/TechnologyTwoThousands.js'
-import GrowthTwoThousands from '../views/GrowthTwoThousands.js'
-import VideoTwoThousands from '../views/VideoTwoThousands'
+import CultureTwoThousands from '../views/CultureTwoThousands';
+import TechnologyTwoThousands from '../views/TechnologyTwoThousands';
+import GrowthTwoThousands from '../views/GrowthTwoThousands';
+import VideoTwoThousands, { videoPlaying } from '../views/VideoTwoThousands';
 import '../../App.css';
 import './Pages.css';
 import '../HCGTButton.css'
@@ -30,6 +30,7 @@ export default function TwoThousand()
 		navigate('/');
 	}, 300000);
 	*/
+	/*
 	useEffect(() => 
 	{
 		setTimer(timer => setTimeout(() => 
@@ -63,7 +64,7 @@ export default function TwoThousand()
 
 	  		return () => clearTimeout(timer);
 	}
-
+	*/
 	function navigateAttract()
 	{
 		setIsVisible(false);
@@ -75,7 +76,7 @@ export default function TwoThousand()
 	}
 
 	return (
-			<div className = {className1} onTouchStart={() => resetTimeout()}>
+			<div className = {className1}>
 				<div className='tableLeft'>
 					<h1 className='backgroundTextTop'>2000-2009</h1>
 					<VideoTwoThousands />
