@@ -10,20 +10,54 @@
     <video id="vplayer" width="1920px" height="1080px"></video>
     <script src="/socket.io/socket.io.js"></script>
     <script>
+      const video = document.getElementById('vplayer');
+      const source = document.createElement('source');
+
       var socket=io();
 
-      socket.on('play', (video_id) => {
-        console.log('playing video');
+      //video listeners
+      video.addEventListener('pause', (event) =>
+      {
+        socket.broadcast.emit('video paused');
+      });
 
-        var video = document.getElementById('vplayer');
-        var source = document.createElement('source');
+      video.addEventListener('ended', (event) =>
+      {
+        socket.broadcast.emit('video ended');
+      });
+
+      //socket listeners
+      socket.on('play', (video_id) => 
+      {
+        console.log('playing video');
         
-        source.setAttribute('src', 'TODO FILENAME');
-        source.setAttribute('type', 'TODO FILETYPE');
+        source.setAttribute('src', '/play/' + video_id);
+        source.setAttribute('type', 'video/mp4');
 
         video.appendChild(source);
+        video.currentTime = 0;
         video.play();
       });
+
+      socket.on('pause', () => 
+      {
+        console.log('video paused');
+        video.pause();
+      });
+
+      socket.on('resume', () =>
+      {
+        console.log('video resumed');
+        video.play();
+      });
+
+      socket.on('seek', (time) =>
+      {
+        console.log('seeking to time: ', time);
+        video.currentTime = time;
+      });
+
+      socket.connect();
     </script>
   </body>
 </html>
